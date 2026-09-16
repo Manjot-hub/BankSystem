@@ -1,0 +1,1902 @@
+[
+  {
+    "user_id": "usr_000001",
+    "email": "johnsonjoshua@example.org",
+    "phone": "(518)519-6001",
+    "full_name": "Alyssa Gonzalez",
+    "date_of_birth": "1992-10-15",
+    "address": {
+      "street": "9402 Peterson Drives",
+      "city": "Port Matthew",
+      "state": "CO",
+      "zip_code": "50298",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "low",
+    "segment": "retail",
+    "created_at": "2022-07-08T19:54:01",
+    "last_login": "2026-08-29T23:14:44"
+  },
+  {
+    "user_id": "usr_000002",
+    "email": "cassandra07@example.net",
+    "phone": "361-284-9593",
+    "full_name": "Patricia Galloway",
+    "date_of_birth": "1967-05-18",
+    "address": {
+      "street": "4752 Kelly Skyway",
+      "city": "Jacquelineland",
+      "state": "PA",
+      "zip_code": "83728",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "medium",
+    "segment": "premium",
+    "created_at": "2023-02-25T01:13:36",
+    "last_login": "2026-09-07T11:19:21"
+  },
+  {
+    "user_id": "usr_000003",
+    "email": "frankgray@example.net",
+    "phone": "001-783-550-3056x413",
+    "full_name": "Jennifer Rocha",
+    "date_of_birth": "1998-02-21",
+    "address": {
+      "street": "2388 Burgess Meadow",
+      "city": "Coxberg",
+      "state": "NY",
+      "zip_code": "65187",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "retail",
+    "created_at": "2022-06-20T18:54:05",
+    "last_login": "2026-08-14T19:53:56"
+  },
+  {
+    "user_id": "usr_000004",
+    "email": "hernandezernest@example.net",
+    "phone": "(791)366-9784x80184",
+    "full_name": "Christopher Smith",
+    "date_of_birth": "1971-07-17",
+    "address": {
+      "street": "148 Eric Track",
+      "city": "New Stephanie",
+      "state": "NC",
+      "zip_code": "00575",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "retail",
+    "created_at": "2024-06-14T11:01:55",
+    "last_login": "2026-09-05T06:16:16"
+  },
+  {
+    "user_id": "usr_000005",
+    "email": "rodriguezmichael@example.com",
+    "phone": "403.491.1718",
+    "full_name": "Theresa Martin",
+    "date_of_birth": "2007-07-05",
+    "address": {
+      "street": "83465 Lam Mission Apt. 331",
+      "city": "Andrewside",
+      "state": "IN",
+      "zip_code": "77629",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2023-07-27T12:48:11",
+    "last_login": "2026-08-12T21:22:56"
+  },
+  {
+    "user_id": "usr_000006",
+    "email": "zimmermanbrian@example.org",
+    "phone": "4519834738",
+    "full_name": "John Russell",
+    "date_of_birth": "1948-07-12",
+    "address": {
+      "street": "656 Owens Stream",
+      "city": "Lake Deniseville",
+      "state": "AR",
+      "zip_code": "53273",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "premium",
+    "created_at": "2024-07-31T12:26:24",
+    "last_login": "2026-08-17T20:18:43"
+  },
+  {
+    "user_id": "usr_000007",
+    "email": "jamesherrera@example.org",
+    "phone": "(424)873-1781x08013",
+    "full_name": "Mr. James Brown",
+    "date_of_birth": "1987-04-09",
+    "address": {
+      "street": "4746 Moore Hill",
+      "city": "North Beth",
+      "state": "ND",
+      "zip_code": "08490",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "retail",
+    "created_at": "2024-05-12T16:16:27",
+    "last_login": "2026-08-15T07:36:24"
+  },
+  {
+    "user_id": "usr_000008",
+    "email": "silvawesley@example.net",
+    "phone": "(808)312-1913",
+    "full_name": "Laura Riley",
+    "date_of_birth": "1941-02-06",
+    "address": {
+      "street": "9985 Harris Stravenue",
+      "city": "Johnfurt",
+      "state": "DC",
+      "zip_code": "88540",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "low",
+    "segment": "business",
+    "created_at": "2024-03-31T09:36:28",
+    "last_login": "2026-09-03T17:42:34"
+  },
+  {
+    "user_id": "usr_000009",
+    "email": "sarah10@example.com",
+    "phone": "+1-791-618-3842x513",
+    "full_name": "Roy Warner",
+    "date_of_birth": "2007-09-06",
+    "address": {
+      "street": "841 Joseph Coves",
+      "city": "West Juan",
+      "state": "IL",
+      "zip_code": "94559",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "private",
+    "created_at": "2024-08-11T15:12:42",
+    "last_login": "2026-08-22T10:12:45"
+  },
+  {
+    "user_id": "usr_000010",
+    "email": "william40@example.org",
+    "phone": "+1-264-300-5242x7868",
+    "full_name": "Stephen Mckee",
+    "date_of_birth": "1940-08-05",
+    "address": {
+      "street": "826 Bobby Lakes Apt. 533",
+      "city": "West Kimberlychester",
+      "state": "RI",
+      "zip_code": "98736",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "business",
+    "created_at": "2023-01-04T12:32:11",
+    "last_login": "2026-08-24T00:49:24"
+  },
+  {
+    "user_id": "usr_000011",
+    "email": "theresacochran@example.com",
+    "phone": "2259634216",
+    "full_name": "Robert Stevens",
+    "date_of_birth": "1977-03-25",
+    "address": {
+      "street": "03654 Tammy Harbors",
+      "city": "Darlenefurt",
+      "state": "TX",
+      "zip_code": "70783",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "medium",
+    "segment": "premium",
+    "created_at": "2024-07-06T04:31:41",
+    "last_login": "2026-08-13T21:09:41"
+  },
+  {
+    "user_id": "usr_000012",
+    "email": "wileyjose@example.net",
+    "phone": "501-696-5569x816",
+    "full_name": "Jeffrey Meyer",
+    "date_of_birth": "1962-07-05",
+    "address": {
+      "street": "1595 Jennifer Hills Suite 656",
+      "city": "Angelaborough",
+      "state": "MT",
+      "zip_code": "87654",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2024-12-02T07:19:31",
+    "last_login": "2026-08-20T23:45:39"
+  },
+  {
+    "user_id": "usr_000013",
+    "email": "richard04@example.com",
+    "phone": "969.495.7773",
+    "full_name": "Diane Beck",
+    "date_of_birth": "1981-04-24",
+    "address": {
+      "street": "43320 John Mountains",
+      "city": "South Robertshire",
+      "state": "ID",
+      "zip_code": "94656",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2024-12-17T07:42:51",
+    "last_login": "2026-09-05T12:59:44"
+  },
+  {
+    "user_id": "usr_000014",
+    "email": "psanchez@example.net",
+    "phone": "5163328708",
+    "full_name": "Robert Contreras",
+    "date_of_birth": "1978-11-16",
+    "address": {
+      "street": "868 Merritt Summit Suite 743",
+      "city": "Katiehaven",
+      "state": "NM",
+      "zip_code": "82650",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "medium",
+    "segment": "private",
+    "created_at": "2023-09-24T15:40:09",
+    "last_login": "2026-08-25T20:56:01"
+  },
+  {
+    "user_id": "usr_000015",
+    "email": "sjones@example.org",
+    "phone": "855-881-2236x231",
+    "full_name": "John Brown",
+    "date_of_birth": "1992-11-15",
+    "address": {
+      "street": "096 Smith Knoll Suite 668",
+      "city": "South Jeffrey",
+      "state": "NE",
+      "zip_code": "64155",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "business",
+    "created_at": "2021-12-10T12:27:07",
+    "last_login": "2026-08-31T10:03:21"
+  },
+  {
+    "user_id": "usr_000016",
+    "email": "elizabeth62@example.com",
+    "phone": "(898)406-9901",
+    "full_name": "Catherine Green",
+    "date_of_birth": "1980-03-30",
+    "address": {
+      "street": "5564 King Common",
+      "city": "Smithside",
+      "state": "AR",
+      "zip_code": "46371",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "low",
+    "segment": "business",
+    "created_at": "2023-08-08T23:25:14",
+    "last_login": "2026-08-15T20:57:02"
+  },
+  {
+    "user_id": "usr_000017",
+    "email": "websterstefanie@example.org",
+    "phone": "9926327193",
+    "full_name": "Carol Lawson",
+    "date_of_birth": "1951-04-13",
+    "address": {
+      "street": "1904 Sanders Stravenue",
+      "city": "North Brittany",
+      "state": "MP",
+      "zip_code": "82714",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "private",
+    "created_at": "2023-10-05T20:22:01",
+    "last_login": "2026-08-17T11:43:41"
+  },
+  {
+    "user_id": "usr_000018",
+    "email": "melissa91@example.net",
+    "phone": "8589651850",
+    "full_name": "Tyler Reid",
+    "date_of_birth": "1998-04-06",
+    "address": {
+      "street": "2849 Marshall Views",
+      "city": "Marcusbury",
+      "state": "MP",
+      "zip_code": "11860",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "private",
+    "created_at": "2024-01-25T22:36:06",
+    "last_login": "2026-09-03T10:13:36"
+  },
+  {
+    "user_id": "usr_000019",
+    "email": "karenhudson@example.net",
+    "phone": "(650)275-2735x4549",
+    "full_name": "Cheryl Allen",
+    "date_of_birth": "1991-01-03",
+    "address": {
+      "street": "377 Mcguire Course Suite 363",
+      "city": "Elizabethstad",
+      "state": "NJ",
+      "zip_code": "73045",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "low",
+    "segment": "retail",
+    "created_at": "2026-03-18T20:36:47",
+    "last_login": "2026-08-29T05:30:39"
+  },
+  {
+    "user_id": "usr_000020",
+    "email": "jbarajas@example.com",
+    "phone": "(574)544-3135x182",
+    "full_name": "Destiny Lawrence",
+    "date_of_birth": "2007-02-04",
+    "address": {
+      "street": "34352 Smith Place Apt. 400",
+      "city": "Heidiberg",
+      "state": "SC",
+      "zip_code": "99170",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "premium",
+    "created_at": "2025-11-14T10:46:23",
+    "last_login": "2026-08-17T12:31:39"
+  },
+  {
+    "user_id": "usr_000021",
+    "email": "andrewstaylor@example.com",
+    "phone": "620-347-1167x19022",
+    "full_name": "Bailey Duran DDS",
+    "date_of_birth": "1966-05-29",
+    "address": {
+      "street": "7496 Carroll Circle Apt. 334",
+      "city": "East Johnside",
+      "state": "CA",
+      "zip_code": "21018",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "low",
+    "segment": "premium",
+    "created_at": "2021-09-19T15:43:15",
+    "last_login": "2026-09-01T08:57:42"
+  },
+  {
+    "user_id": "usr_000022",
+    "email": "enorris@example.com",
+    "phone": "5348471349",
+    "full_name": "Danny Hernandez",
+    "date_of_birth": "1971-11-05",
+    "address": {
+      "street": "02499 Gonzales Mountain",
+      "city": "Hollyview",
+      "state": "NY",
+      "zip_code": "71277",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "private",
+    "created_at": "2025-11-23T12:14:40",
+    "last_login": "2026-09-02T19:01:49"
+  },
+  {
+    "user_id": "usr_000023",
+    "email": "georgepamela@example.net",
+    "phone": "994-601-3990x49027",
+    "full_name": "Kevin Walters",
+    "date_of_birth": "2002-08-13",
+    "address": {
+      "street": "5655 Mia Isle",
+      "city": "Steeleport",
+      "state": "TN",
+      "zip_code": "52989",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "high",
+    "segment": "private",
+    "created_at": "2026-05-17T10:22:51",
+    "last_login": "2026-08-14T07:45:34"
+  },
+  {
+    "user_id": "usr_000024",
+    "email": "qmiller@example.com",
+    "phone": "768-908-7603",
+    "full_name": "Olivia Harris",
+    "date_of_birth": "1953-07-10",
+    "address": {
+      "street": "7109 Jennifer Inlet Apt. 861",
+      "city": "Port Robin",
+      "state": "NH",
+      "zip_code": "15897",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "private",
+    "created_at": "2023-01-02T17:07:24",
+    "last_login": "2026-09-05T17:39:14"
+  },
+  {
+    "user_id": "usr_000025",
+    "email": "william46@example.com",
+    "phone": "737.682.6398x2146",
+    "full_name": "Diane Evans",
+    "date_of_birth": "2002-05-02",
+    "address": {
+      "street": "8755 Gibson Islands",
+      "city": "Lake John",
+      "state": "MS",
+      "zip_code": "31114",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "private",
+    "created_at": "2025-03-10T13:48:57",
+    "last_login": "2026-08-14T15:51:26"
+  },
+  {
+    "user_id": "usr_000026",
+    "email": "julie66@example.net",
+    "phone": "+1-227-402-8951x7187",
+    "full_name": "Matthew Moore",
+    "date_of_birth": "1999-08-04",
+    "address": {
+      "street": "9615 Finley Road Suite 809",
+      "city": "East Crystalport",
+      "state": "IN",
+      "zip_code": "98381",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "retail",
+    "created_at": "2022-06-19T03:22:33",
+    "last_login": "2026-09-02T14:37:04"
+  },
+  {
+    "user_id": "usr_000027",
+    "email": "hodgesjane@example.org",
+    "phone": "524.800.5045x562",
+    "full_name": "Rebecca Jackson",
+    "date_of_birth": "1946-06-10",
+    "address": {
+      "street": "379 Jesse Route Suite 740",
+      "city": "Santanaside",
+      "state": "GA",
+      "zip_code": "10182",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "premium",
+    "created_at": "2025-06-14T17:57:51",
+    "last_login": "2026-08-29T07:37:03"
+  },
+  {
+    "user_id": "usr_000028",
+    "email": "danielle64@example.com",
+    "phone": "836-671-3695x9440",
+    "full_name": "Sean Osborne",
+    "date_of_birth": "1942-05-15",
+    "address": {
+      "street": "3953 Christine Springs Apt. 104",
+      "city": "Johnsonstad",
+      "state": "VA",
+      "zip_code": "17725",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "premium",
+    "created_at": "2022-06-18T09:02:09",
+    "last_login": "2026-08-26T20:49:58"
+  },
+  {
+    "user_id": "usr_000029",
+    "email": "julie23@example.org",
+    "phone": "+1-758-384-2474",
+    "full_name": "Bernard Webster",
+    "date_of_birth": "1966-05-26",
+    "address": {
+      "street": "516 Joseph Crossing Suite 549",
+      "city": "Carsonstad",
+      "state": "CT",
+      "zip_code": "88953",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "business",
+    "created_at": "2023-09-07T19:13:45",
+    "last_login": "2026-09-04T10:18:53"
+  },
+  {
+    "user_id": "usr_000030",
+    "email": "harveysherry@example.com",
+    "phone": "+1-331-374-6120x047",
+    "full_name": "Joshua Price",
+    "date_of_birth": "1986-03-10",
+    "address": {
+      "street": "261 Gilbert Harbors Apt. 537",
+      "city": "Sampsonstad",
+      "state": "CT",
+      "zip_code": "90374",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "high",
+    "segment": "premium",
+    "created_at": "2024-10-26T14:41:02",
+    "last_login": "2026-09-07T23:21:11"
+  },
+  {
+    "user_id": "usr_000031",
+    "email": "bruce43@example.org",
+    "phone": "513.590.0532x931",
+    "full_name": "Crystal Schroeder",
+    "date_of_birth": "1936-01-29",
+    "address": {
+      "street": "28421 David Knolls Apt. 950",
+      "city": "West Brian",
+      "state": "WA",
+      "zip_code": "55677",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2026-03-03T19:59:04",
+    "last_login": "2026-08-18T01:24:55"
+  },
+  {
+    "user_id": "usr_000032",
+    "email": "alvarezkimberly@example.net",
+    "phone": "001-917-283-9084",
+    "full_name": "John Morales",
+    "date_of_birth": "1950-05-21",
+    "address": {
+      "street": "711 Franklin Circles Apt. 499",
+      "city": "Oscarhaven",
+      "state": "LA",
+      "zip_code": "59970",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "private",
+    "created_at": "2025-12-30T00:49:29",
+    "last_login": "2026-09-10T22:22:40"
+  },
+  {
+    "user_id": "usr_000033",
+    "email": "sgarcia@example.org",
+    "phone": "+1-883-767-3657x6615",
+    "full_name": "Jacqueline Hernandez",
+    "date_of_birth": "2000-03-28",
+    "address": {
+      "street": "11615 Angela Radial",
+      "city": "Elizabethchester",
+      "state": "MI",
+      "zip_code": "87708",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2025-04-17T08:39:43",
+    "last_login": "2026-08-15T00:56:36"
+  },
+  {
+    "user_id": "usr_000034",
+    "email": "caroline51@example.net",
+    "phone": "232.673.1585x14936",
+    "full_name": "Donald Farmer",
+    "date_of_birth": "1981-12-10",
+    "address": {
+      "street": "22961 Joyce Burgs Apt. 836",
+      "city": "Chavezburgh",
+      "state": "MN",
+      "zip_code": "41347",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "private",
+    "created_at": "2024-06-15T03:56:44",
+    "last_login": "2026-09-09T02:17:55"
+  },
+  {
+    "user_id": "usr_000035",
+    "email": "wareeric@example.net",
+    "phone": "6145767976",
+    "full_name": "Ashley Jordan",
+    "date_of_birth": "1974-03-30",
+    "address": {
+      "street": "403 Joyce Centers Apt. 343",
+      "city": "Port Jonathan",
+      "state": "MD",
+      "zip_code": "16227",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "business",
+    "created_at": "2021-10-05T08:35:16",
+    "last_login": "2026-09-05T16:30:01"
+  },
+  {
+    "user_id": "usr_000036",
+    "email": "ythompson@example.net",
+    "phone": "001-738-885-1606x071",
+    "full_name": "Michelle Butler",
+    "date_of_birth": "1951-05-15",
+    "address": {
+      "street": "52975 Samuel Coves Apt. 696",
+      "city": "South Monicamouth",
+      "state": "IN",
+      "zip_code": "44156",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "high",
+    "segment": "business",
+    "created_at": "2023-02-15T17:05:17",
+    "last_login": "2026-08-16T05:59:34"
+  },
+  {
+    "user_id": "usr_000037",
+    "email": "schmidtjames@example.com",
+    "phone": "(923)912-4329x212",
+    "full_name": "Olivia Cole",
+    "date_of_birth": "1979-09-06",
+    "address": {
+      "street": "71774 Vargas Knoll Apt. 477",
+      "city": "North Miguelport",
+      "state": "CA",
+      "zip_code": "84998",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "premium",
+    "created_at": "2022-06-18T21:11:59",
+    "last_login": "2026-09-11T09:32:28"
+  },
+  {
+    "user_id": "usr_000038",
+    "email": "jford@example.net",
+    "phone": "2799359782",
+    "full_name": "Steven Cooper",
+    "date_of_birth": "1947-03-04",
+    "address": {
+      "street": "37788 Michael Haven",
+      "city": "Ortizmouth",
+      "state": "TX",
+      "zip_code": "78867",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "private",
+    "created_at": "2022-02-21T00:51:36",
+    "last_login": "2026-08-28T18:53:57"
+  },
+  {
+    "user_id": "usr_000039",
+    "email": "riveraangela@example.com",
+    "phone": "349-625-1925x4629",
+    "full_name": "Maria Murphy",
+    "date_of_birth": "1953-01-31",
+    "address": {
+      "street": "685 Michael Falls",
+      "city": "West Stacey",
+      "state": "NM",
+      "zip_code": "25667",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "business",
+    "created_at": "2023-08-16T04:28:41",
+    "last_login": "2026-08-19T05:16:46"
+  },
+  {
+    "user_id": "usr_000040",
+    "email": "chrisrichard@example.org",
+    "phone": "988.205.9296x22292",
+    "full_name": "Michael Young",
+    "date_of_birth": "1996-02-24",
+    "address": {
+      "street": "738 Kyle Valleys Suite 359",
+      "city": "Murrayport",
+      "state": "WI",
+      "zip_code": "50553",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "medium",
+    "segment": "private",
+    "created_at": "2025-12-21T19:38:43",
+    "last_login": "2026-09-07T03:32:22"
+  },
+  {
+    "user_id": "usr_000041",
+    "email": "mburch@example.net",
+    "phone": "(640)375-8181",
+    "full_name": "Denise Whitehead",
+    "date_of_birth": "1955-09-30",
+    "address": {
+      "street": "37506 Randy Landing Apt. 615",
+      "city": "North Lucas",
+      "state": "CT",
+      "zip_code": "94178",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "business",
+    "created_at": "2024-07-19T01:15:54",
+    "last_login": "2026-08-19T15:09:51"
+  },
+  {
+    "user_id": "usr_000042",
+    "email": "benjaminlowery@example.com",
+    "phone": "001-827-379-0104x328",
+    "full_name": "Cynthia Martinez",
+    "date_of_birth": "1968-02-22",
+    "address": {
+      "street": "971 Mary Parks Apt. 893",
+      "city": "West Ruben",
+      "state": "RI",
+      "zip_code": "46745",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "retail",
+    "created_at": "2023-09-28T17:58:27",
+    "last_login": "2026-09-09T05:52:33"
+  },
+  {
+    "user_id": "usr_000043",
+    "email": "qlopez@example.org",
+    "phone": "651.288.8880x67065",
+    "full_name": "Austin Allen",
+    "date_of_birth": "1949-10-20",
+    "address": {
+      "street": "05852 Pollard Neck Apt. 217",
+      "city": "West Jamesborough",
+      "state": "FM",
+      "zip_code": "05993",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "premium",
+    "created_at": "2024-05-18T20:44:02",
+    "last_login": "2026-08-27T14:16:08"
+  },
+  {
+    "user_id": "usr_000044",
+    "email": "ihays@example.com",
+    "phone": "903-845-0541x566",
+    "full_name": "Cody Holt",
+    "date_of_birth": "1985-09-08",
+    "address": {
+      "street": "61692 Morris Common Suite 447",
+      "city": "Jacksonmouth",
+      "state": "MI",
+      "zip_code": "59107",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2022-01-20T22:26:02",
+    "last_login": "2026-08-29T15:45:56"
+  },
+  {
+    "user_id": "usr_000045",
+    "email": "yhill@example.org",
+    "phone": "265-482-0297",
+    "full_name": "Richard Diaz",
+    "date_of_birth": "1987-10-19",
+    "address": {
+      "street": "275 Wallace Club",
+      "city": "New Michael",
+      "state": "MD",
+      "zip_code": "85640",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "medium",
+    "segment": "business",
+    "created_at": "2024-01-25T04:49:11",
+    "last_login": "2026-08-24T15:49:23"
+  },
+  {
+    "user_id": "usr_000046",
+    "email": "johnsonjacob@example.net",
+    "phone": "(381)944-7394x7312",
+    "full_name": "Micheal Osborn",
+    "date_of_birth": "1979-03-10",
+    "address": {
+      "street": "188 Vance Vista Apt. 258",
+      "city": "North Tracie",
+      "state": "WY",
+      "zip_code": "18703",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2023-09-16T20:32:01",
+    "last_login": "2026-09-05T12:34:54"
+  },
+  {
+    "user_id": "usr_000047",
+    "email": "wardashley@example.com",
+    "phone": "+1-829-811-4678",
+    "full_name": "Angela Compton",
+    "date_of_birth": "1945-10-14",
+    "address": {
+      "street": "8528 Katrina Curve Suite 801",
+      "city": "West Fred",
+      "state": "MD",
+      "zip_code": "93474",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "retail",
+    "created_at": "2023-08-12T20:29:15",
+    "last_login": "2026-08-29T08:09:01"
+  },
+  {
+    "user_id": "usr_000048",
+    "email": "meghan43@example.net",
+    "phone": "+1-442-449-8182",
+    "full_name": "Michelle Jacobs",
+    "date_of_birth": "1941-04-19",
+    "address": {
+      "street": "09439 Montgomery Burgs",
+      "city": "Smallside",
+      "state": "LA",
+      "zip_code": "84637",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "private",
+    "created_at": "2024-04-06T21:58:27",
+    "last_login": "2026-09-04T23:40:33"
+  },
+  {
+    "user_id": "usr_000049",
+    "email": "lindacohen@example.com",
+    "phone": "710.727.6773x592",
+    "full_name": "Shannon Hester",
+    "date_of_birth": "1953-06-28",
+    "address": {
+      "street": "815 Steven Grove Suite 321",
+      "city": "West Soniachester",
+      "state": "IA",
+      "zip_code": "21433",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2024-06-24T15:35:18",
+    "last_login": "2026-09-09T14:03:31"
+  },
+  {
+    "user_id": "usr_000050",
+    "email": "james27@example.net",
+    "phone": "774.270.1687x339",
+    "full_name": "Johnny Khan",
+    "date_of_birth": "1999-09-27",
+    "address": {
+      "street": "016 Nicole Stream Suite 650",
+      "city": "Williamsside",
+      "state": "ID",
+      "zip_code": "48017",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "medium",
+    "segment": "premium",
+    "created_at": "2026-05-27T03:29:45",
+    "last_login": "2026-08-26T13:14:59"
+  },
+  {
+    "user_id": "usr_000051",
+    "email": "hughesshannon@example.net",
+    "phone": "599-812-1655x852",
+    "full_name": "Amber Taylor",
+    "date_of_birth": "1981-01-07",
+    "address": {
+      "street": "729 Mark Ridge Suite 269",
+      "city": "Brittneyhaven",
+      "state": "MP",
+      "zip_code": "67310",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "low",
+    "segment": "private",
+    "created_at": "2026-03-23T06:20:21",
+    "last_login": "2026-09-05T07:43:01"
+  },
+  {
+    "user_id": "usr_000052",
+    "email": "thomas05@example.com",
+    "phone": "+1-916-494-0974x99309",
+    "full_name": "Michelle Hampton",
+    "date_of_birth": "1987-06-09",
+    "address": {
+      "street": "309 James Mill",
+      "city": "Robertchester",
+      "state": "UT",
+      "zip_code": "27225",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "low",
+    "segment": "retail",
+    "created_at": "2025-03-09T08:09:42",
+    "last_login": "2026-09-05T21:39:59"
+  },
+  {
+    "user_id": "usr_000053",
+    "email": "vsalas@example.net",
+    "phone": "7284385786",
+    "full_name": "Joseph Payne",
+    "date_of_birth": "1971-09-03",
+    "address": {
+      "street": "34843 Wise Squares Apt. 757",
+      "city": "Annview",
+      "state": "LA",
+      "zip_code": "16475",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "medium",
+    "segment": "premium",
+    "created_at": "2026-07-29T01:44:02",
+    "last_login": "2026-09-07T21:52:03"
+  },
+  {
+    "user_id": "usr_000054",
+    "email": "zhuang@example.com",
+    "phone": "001-624-404-1574x73384",
+    "full_name": "Patrick Allen",
+    "date_of_birth": "1942-08-08",
+    "address": {
+      "street": "301 Rivera Mountains",
+      "city": "Lake Kellitown",
+      "state": "OH",
+      "zip_code": "21202",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "premium",
+    "created_at": "2025-02-26T13:25:23",
+    "last_login": "2026-09-04T15:14:04"
+  },
+  {
+    "user_id": "usr_000055",
+    "email": "wsantos@example.com",
+    "phone": "440-619-3802x62067",
+    "full_name": "Alexandra Bradley",
+    "date_of_birth": "1950-04-18",
+    "address": {
+      "street": "7887 Melissa Mountain Suite 315",
+      "city": "Lake Stephen",
+      "state": "KS",
+      "zip_code": "94689",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "retail",
+    "created_at": "2023-04-12T20:12:48",
+    "last_login": "2026-08-13T05:24:49"
+  },
+  {
+    "user_id": "usr_000056",
+    "email": "krystal93@example.org",
+    "phone": "+1-566-285-1612x275",
+    "full_name": "David Molina",
+    "date_of_birth": "1980-07-21",
+    "address": {
+      "street": "904 Schwartz Circle Apt. 742",
+      "city": "Parksport",
+      "state": "UT",
+      "zip_code": "15890",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "medium",
+    "segment": "business",
+    "created_at": "2024-03-15T23:48:09",
+    "last_login": "2026-08-30T09:13:26"
+  },
+  {
+    "user_id": "usr_000057",
+    "email": "jeffreyanderson@example.org",
+    "phone": "995.768.7833x918",
+    "full_name": "Justin Brown",
+    "date_of_birth": "2004-06-27",
+    "address": {
+      "street": "822 Bond Mills",
+      "city": "Lake Jamieshire",
+      "state": "NM",
+      "zip_code": "12420",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "private",
+    "created_at": "2026-01-14T00:32:56",
+    "last_login": "2026-09-03T04:01:45"
+  },
+  {
+    "user_id": "usr_000058",
+    "email": "chavezwilliam@example.com",
+    "phone": "001-508-374-0640",
+    "full_name": "Gregory Brown",
+    "date_of_birth": "1943-11-23",
+    "address": {
+      "street": "0462 Katie Stream",
+      "city": "Brooksfurt",
+      "state": "NV",
+      "zip_code": "49980",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "low",
+    "segment": "retail",
+    "created_at": "2024-11-21T10:21:57",
+    "last_login": "2026-08-16T10:30:08"
+  },
+  {
+    "user_id": "usr_000059",
+    "email": "desireebailey@example.org",
+    "phone": "+1-868-823-0047",
+    "full_name": "Danielle Reed",
+    "date_of_birth": "1973-03-17",
+    "address": {
+      "street": "106 John Cliff",
+      "city": "New Arthurton",
+      "state": "IA",
+      "zip_code": "97565",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "retail",
+    "created_at": "2022-01-26T18:44:03",
+    "last_login": "2026-09-01T01:40:39"
+  },
+  {
+    "user_id": "usr_000060",
+    "email": "nyoung@example.org",
+    "phone": "(584)639-5995",
+    "full_name": "Victoria Boyd",
+    "date_of_birth": "1991-12-24",
+    "address": {
+      "street": "0892 Peters Causeway Suite 685",
+      "city": "Russellport",
+      "state": "MS",
+      "zip_code": "24602",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "business",
+    "created_at": "2026-04-09T15:02:35",
+    "last_login": "2026-09-04T12:41:37"
+  },
+  {
+    "user_id": "usr_000061",
+    "email": "melissaturner@example.net",
+    "phone": "(870)586-6882",
+    "full_name": "Gary Miller",
+    "date_of_birth": "1996-11-28",
+    "address": {
+      "street": "83046 Morgan Field Apt. 735",
+      "city": "Susantown",
+      "state": "IL",
+      "zip_code": "25407",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "premium",
+    "created_at": "2022-09-10T19:56:02",
+    "last_login": "2026-09-04T18:59:15"
+  },
+  {
+    "user_id": "usr_000062",
+    "email": "heatherpadilla@example.com",
+    "phone": "685.746.7854",
+    "full_name": "Kathleen Garcia",
+    "date_of_birth": "1999-08-04",
+    "address": {
+      "street": "55609 Joyce Brook Suite 899",
+      "city": "Phillipsborough",
+      "state": "MA",
+      "zip_code": "30650",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "business",
+    "created_at": "2024-12-04T11:06:38",
+    "last_login": "2026-09-09T04:51:26"
+  },
+  {
+    "user_id": "usr_000063",
+    "email": "victorpena@example.net",
+    "phone": "247-377-2522x87280",
+    "full_name": "Mary Duran",
+    "date_of_birth": "1991-10-27",
+    "address": {
+      "street": "312 Jeffery Motorway",
+      "city": "Brucefort",
+      "state": "TN",
+      "zip_code": "64445",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "low",
+    "segment": "private",
+    "created_at": "2021-10-30T05:15:00",
+    "last_login": "2026-08-12T20:42:30"
+  },
+  {
+    "user_id": "usr_000064",
+    "email": "hsmith@example.net",
+    "phone": "584-608-6211x823",
+    "full_name": "Debra Sanders",
+    "date_of_birth": "1986-06-19",
+    "address": {
+      "street": "9334 Desiree Walks Apt. 166",
+      "city": "Tranton",
+      "state": "SC",
+      "zip_code": "01739",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "business",
+    "created_at": "2023-02-25T19:29:24",
+    "last_login": "2026-08-16T13:20:26"
+  },
+  {
+    "user_id": "usr_000065",
+    "email": "pbruce@example.com",
+    "phone": "001-218-303-3974",
+    "full_name": "Diana Daniels",
+    "date_of_birth": "1940-03-03",
+    "address": {
+      "street": "0392 Hickman Hills",
+      "city": "New John",
+      "state": "MP",
+      "zip_code": "51508",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "premium",
+    "created_at": "2026-04-17T19:27:39",
+    "last_login": "2026-08-28T15:29:51"
+  },
+  {
+    "user_id": "usr_000066",
+    "email": "icampos@example.net",
+    "phone": "001-818-750-1631x5999",
+    "full_name": "Donald Riddle",
+    "date_of_birth": "2002-06-19",
+    "address": {
+      "street": "8662 Miller River",
+      "city": "Laurenland",
+      "state": "CO",
+      "zip_code": "35624",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "medium",
+    "segment": "business",
+    "created_at": "2023-01-03T11:45:10",
+    "last_login": "2026-08-30T23:44:11"
+  },
+  {
+    "user_id": "usr_000067",
+    "email": "jodistewart@example.org",
+    "phone": "404-875-4121",
+    "full_name": "Justin Russell",
+    "date_of_birth": "1939-04-08",
+    "address": {
+      "street": "8199 Shields Bridge",
+      "city": "Robertland",
+      "state": "VA",
+      "zip_code": "73840",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "private",
+    "created_at": "2023-10-05T12:23:55",
+    "last_login": "2026-09-09T07:23:11"
+  },
+  {
+    "user_id": "usr_000068",
+    "email": "ginajackson@example.com",
+    "phone": "647-521-2646x4715",
+    "full_name": "Kathleen Jensen",
+    "date_of_birth": "1998-01-03",
+    "address": {
+      "street": "40659 Brock Isle",
+      "city": "Cookberg",
+      "state": "ME",
+      "zip_code": "42531",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "high",
+    "segment": "business",
+    "created_at": "2023-05-28T08:46:36",
+    "last_login": "2026-09-04T19:05:28"
+  },
+  {
+    "user_id": "usr_000069",
+    "email": "gregory65@example.com",
+    "phone": "001-479-235-6465x1939",
+    "full_name": "Julia Erickson",
+    "date_of_birth": "1995-05-14",
+    "address": {
+      "street": "167 Cynthia Garden Suite 266",
+      "city": "South Vickifort",
+      "state": "OR",
+      "zip_code": "53035",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "premium",
+    "created_at": "2026-03-29T13:31:32",
+    "last_login": "2026-09-06T03:15:03"
+  },
+  {
+    "user_id": "usr_000070",
+    "email": "ystephens@example.com",
+    "phone": "001-789-811-3529x096",
+    "full_name": "Brett Walker",
+    "date_of_birth": "2006-04-20",
+    "address": {
+      "street": "5679 Michael Burg",
+      "city": "Garciachester",
+      "state": "PW",
+      "zip_code": "11754",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2022-09-06T22:57:40",
+    "last_login": "2026-08-19T10:04:04"
+  },
+  {
+    "user_id": "usr_000071",
+    "email": "larry73@example.net",
+    "phone": "357.417.7514x0105",
+    "full_name": "Natalie Black",
+    "date_of_birth": "1957-06-27",
+    "address": {
+      "street": "673 Soto Ferry Suite 609",
+      "city": "South Brittany",
+      "state": "MS",
+      "zip_code": "01084",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "premium",
+    "created_at": "2023-07-10T16:33:46",
+    "last_login": "2026-08-22T12:45:38"
+  },
+  {
+    "user_id": "usr_000072",
+    "email": "karen19@example.org",
+    "phone": "+1-725-853-7147",
+    "full_name": "Laurie Bailey",
+    "date_of_birth": "1998-01-03",
+    "address": {
+      "street": "499 Emily Island",
+      "city": "East Kevinburgh",
+      "state": "MN",
+      "zip_code": "91391",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "low",
+    "segment": "retail",
+    "created_at": "2022-11-24T12:39:41",
+    "last_login": "2026-09-06T08:09:30"
+  },
+  {
+    "user_id": "usr_000073",
+    "email": "ibarnes@example.net",
+    "phone": "(962)278-2827x4225",
+    "full_name": "Tiffany Washington",
+    "date_of_birth": "1962-04-01",
+    "address": {
+      "street": "876 Perry Ville Suite 721",
+      "city": "Port Kathleenport",
+      "state": "AZ",
+      "zip_code": "36526",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "retail",
+    "created_at": "2023-08-10T21:44:41",
+    "last_login": "2026-09-07T15:21:49"
+  },
+  {
+    "user_id": "usr_000074",
+    "email": "gary79@example.net",
+    "phone": "001-578-881-9148x58078",
+    "full_name": "Ronald Potter",
+    "date_of_birth": "1976-03-18",
+    "address": {
+      "street": "4517 Kimberly Freeway",
+      "city": "Port Joan",
+      "state": "UT",
+      "zip_code": "46458",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "retail",
+    "created_at": "2025-05-03T14:39:17",
+    "last_login": "2026-08-20T14:23:13"
+  },
+  {
+    "user_id": "usr_000075",
+    "email": "kristenli@example.org",
+    "phone": "001-658-649-8254",
+    "full_name": "Kayla Mccullough",
+    "date_of_birth": "1948-08-26",
+    "address": {
+      "street": "0422 Dustin Islands",
+      "city": "Port Megan",
+      "state": "MO",
+      "zip_code": "64655",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "low",
+    "segment": "premium",
+    "created_at": "2022-11-27T01:17:23",
+    "last_login": "2026-09-09T13:45:14"
+  },
+  {
+    "user_id": "usr_000076",
+    "email": "courtney67@example.org",
+    "phone": "+1-716-384-5775x9017",
+    "full_name": "Jennifer Donaldson",
+    "date_of_birth": "1964-07-11",
+    "address": {
+      "street": "5458 Ashlee Oval Suite 001",
+      "city": "Smithburgh",
+      "state": "NV",
+      "zip_code": "60337",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "high",
+    "segment": "business",
+    "created_at": "2021-09-13T10:36:18",
+    "last_login": "2026-09-02T07:25:36"
+  },
+  {
+    "user_id": "usr_000077",
+    "email": "wendyblankenship@example.net",
+    "phone": "824-315-4152x0643",
+    "full_name": "April Woods",
+    "date_of_birth": "1953-10-02",
+    "address": {
+      "street": "700 Montoya Wall",
+      "city": "Bensonfort",
+      "state": "CA",
+      "zip_code": "30509",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "premium",
+    "created_at": "2024-12-14T11:58:07",
+    "last_login": "2026-08-16T21:04:57"
+  },
+  {
+    "user_id": "usr_000078",
+    "email": "garciamichael@example.com",
+    "phone": "(462)921-8909",
+    "full_name": "Daniel Goodman",
+    "date_of_birth": "1991-09-23",
+    "address": {
+      "street": "11219 Bell Meadow Suite 234",
+      "city": "East Angelaport",
+      "state": "WI",
+      "zip_code": "91003",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "high",
+    "segment": "business",
+    "created_at": "2021-12-03T16:22:36",
+    "last_login": "2026-08-27T04:27:05"
+  },
+  {
+    "user_id": "usr_000079",
+    "email": "aprilhicks@example.net",
+    "phone": "(740)737-6137x9180",
+    "full_name": "Scott Carroll",
+    "date_of_birth": "1985-06-04",
+    "address": {
+      "street": "1091 Jose Canyon",
+      "city": "Port Raymondport",
+      "state": "SC",
+      "zip_code": "93906",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "business",
+    "created_at": "2025-12-16T01:07:23",
+    "last_login": "2026-09-01T17:01:04"
+  },
+  {
+    "user_id": "usr_000080",
+    "email": "fmiles@example.net",
+    "phone": "+1-589-424-1418",
+    "full_name": "Jeanette Walters",
+    "date_of_birth": "1944-09-09",
+    "address": {
+      "street": "630 Christopher Mews Apt. 799",
+      "city": "West Elizabethburgh",
+      "state": "DE",
+      "zip_code": "02161",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "retail",
+    "created_at": "2022-11-11T15:27:27",
+    "last_login": "2026-08-13T02:13:43"
+  },
+  {
+    "user_id": "usr_000081",
+    "email": "tylerreed@example.net",
+    "phone": "001-642-352-4105x6481",
+    "full_name": "Jorge Brown PhD",
+    "date_of_birth": "1958-05-28",
+    "address": {
+      "street": "41913 Bradley Wall Apt. 307",
+      "city": "Patrickberg",
+      "state": "HI",
+      "zip_code": "05136",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "medium",
+    "segment": "private",
+    "created_at": "2026-05-26T00:47:26",
+    "last_login": "2026-09-01T21:36:18"
+  },
+  {
+    "user_id": "usr_000082",
+    "email": "marcbutler@example.net",
+    "phone": "941-695-1802x38061",
+    "full_name": "Emily Miller",
+    "date_of_birth": "1997-11-08",
+    "address": {
+      "street": "3494 Steven Ramp",
+      "city": "Cuevasborough",
+      "state": "VA",
+      "zip_code": "72139",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "medium",
+    "segment": "business",
+    "created_at": "2023-10-12T22:11:20",
+    "last_login": "2026-08-19T20:25:37"
+  },
+  {
+    "user_id": "usr_000083",
+    "email": "randolphandrew@example.net",
+    "phone": "(205)406-4138x367",
+    "full_name": "Anna Morse",
+    "date_of_birth": "2006-06-07",
+    "address": {
+      "street": "571 William Route Suite 199",
+      "city": "South Elaineberg",
+      "state": "IA",
+      "zip_code": "38731",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "low",
+    "segment": "retail",
+    "created_at": "2023-12-01T05:05:57",
+    "last_login": "2026-08-27T20:00:59"
+  },
+  {
+    "user_id": "usr_000084",
+    "email": "vhaynes@example.com",
+    "phone": "774-831-3291x21277",
+    "full_name": "Hunter Townsend",
+    "date_of_birth": "1997-03-13",
+    "address": {
+      "street": "4112 Mckenzie Square Apt. 352",
+      "city": "Lake Johnstad",
+      "state": "MO",
+      "zip_code": "67801",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "private",
+    "created_at": "2022-02-10T10:13:37",
+    "last_login": "2026-08-27T01:10:44"
+  },
+  {
+    "user_id": "usr_000085",
+    "email": "lori20@example.com",
+    "phone": "488.531.7121x003",
+    "full_name": "Jacqueline Mccoy",
+    "date_of_birth": "1947-02-17",
+    "address": {
+      "street": "01372 Rebecca Village Suite 107",
+      "city": "East Sandrachester",
+      "state": "GU",
+      "zip_code": "95453",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "premium",
+    "created_at": "2025-01-20T13:26:29",
+    "last_login": "2026-09-05T15:02:00"
+  },
+  {
+    "user_id": "usr_000086",
+    "email": "reyesronald@example.com",
+    "phone": "524.647.2099",
+    "full_name": "Dr. John Miller MD",
+    "date_of_birth": "1992-10-01",
+    "address": {
+      "street": "838 Veronica Tunnel",
+      "city": "Timothyfort",
+      "state": "MI",
+      "zip_code": "74642",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "business",
+    "created_at": "2025-12-20T05:21:39",
+    "last_login": "2026-08-28T03:42:02"
+  },
+  {
+    "user_id": "usr_000087",
+    "email": "bnelson@example.com",
+    "phone": "+1-530-540-7859x321",
+    "full_name": "Robert Stark",
+    "date_of_birth": "1943-04-21",
+    "address": {
+      "street": "652 Joel Island",
+      "city": "Robintown",
+      "state": "VT",
+      "zip_code": "92324",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "premium",
+    "created_at": "2024-09-07T23:31:33",
+    "last_login": "2026-09-09T02:21:58"
+  },
+  {
+    "user_id": "usr_000088",
+    "email": "annalopez@example.com",
+    "phone": "+1-542-270-1039",
+    "full_name": "April Hardin",
+    "date_of_birth": "1963-02-10",
+    "address": {
+      "street": "2500 Brenda Divide",
+      "city": "Port Aliciastad",
+      "state": "CA",
+      "zip_code": "49468",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "medium",
+    "segment": "premium",
+    "created_at": "2025-01-22T09:56:51",
+    "last_login": "2026-09-09T23:45:48"
+  },
+  {
+    "user_id": "usr_000089",
+    "email": "rogersmarcus@example.org",
+    "phone": "001-667-452-8953x9264",
+    "full_name": "Aaron Miles",
+    "date_of_birth": "1988-12-27",
+    "address": {
+      "street": "95939 Sharon Divide",
+      "city": "Juliebury",
+      "state": "MI",
+      "zip_code": "42380",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2023-02-14T22:47:51",
+    "last_login": "2026-08-16T20:22:39"
+  },
+  {
+    "user_id": "usr_000090",
+    "email": "sean43@example.org",
+    "phone": "001-915-841-0067x626",
+    "full_name": "James Poole",
+    "date_of_birth": "1966-05-24",
+    "address": {
+      "street": "1040 Green Cove",
+      "city": "West Georgefurt",
+      "state": "GA",
+      "zip_code": "96443",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "retail",
+    "created_at": "2022-05-02T08:47:24",
+    "last_login": "2026-09-08T02:21:34"
+  },
+  {
+    "user_id": "usr_000091",
+    "email": "morgantricia@example.com",
+    "phone": "001-806-629-6201x533",
+    "full_name": "Elizabeth Davis",
+    "date_of_birth": "1989-03-02",
+    "address": {
+      "street": "05061 Colon Road Suite 310",
+      "city": "East Danielle",
+      "state": "CO",
+      "zip_code": "62572",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "premium",
+    "created_at": "2022-09-05T05:10:27",
+    "last_login": "2026-08-27T12:15:43"
+  },
+  {
+    "user_id": "usr_000092",
+    "email": "qruiz@example.com",
+    "phone": "286-625-6527",
+    "full_name": "Dennis Hood",
+    "date_of_birth": "1944-01-31",
+    "address": {
+      "street": "115 Arellano Radial",
+      "city": "New Bruce",
+      "state": "MS",
+      "zip_code": "68996",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "medium",
+    "segment": "business",
+    "created_at": "2025-04-03T23:40:27",
+    "last_login": "2026-09-07T12:55:26"
+  },
+  {
+    "user_id": "usr_000093",
+    "email": "parmstrong@example.com",
+    "phone": "416-508-9899x2172",
+    "full_name": "Beth Henderson",
+    "date_of_birth": "1994-12-13",
+    "address": {
+      "street": "294 Bartlett Valley",
+      "city": "North Paulfurt",
+      "state": "OH",
+      "zip_code": "43247",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2024-01-17T11:13:49",
+    "last_login": "2026-09-06T18:29:06"
+  },
+  {
+    "user_id": "usr_000094",
+    "email": "astark@example.net",
+    "phone": "+1-398-361-6229x991",
+    "full_name": "Sharon Beard",
+    "date_of_birth": "1991-08-13",
+    "address": {
+      "street": "7997 Gerald Lodge Apt. 996",
+      "city": "South Pamelamouth",
+      "state": "UT",
+      "zip_code": "31640",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2022-02-11T11:36:21",
+    "last_login": "2026-09-04T14:40:25"
+  },
+  {
+    "user_id": "usr_000095",
+    "email": "penny05@example.com",
+    "phone": "547-913-2475x4691",
+    "full_name": "Rodney Figueroa",
+    "date_of_birth": "2005-12-27",
+    "address": {
+      "street": "82148 Taylor Vista Apt. 233",
+      "city": "East Antonioton",
+      "state": "PW",
+      "zip_code": "47736",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "medium",
+    "segment": "business",
+    "created_at": "2023-05-22T22:54:18",
+    "last_login": "2026-08-25T20:12:40"
+  },
+  {
+    "user_id": "usr_000096",
+    "email": "madison86@example.net",
+    "phone": "703-757-9727",
+    "full_name": "Steven Curry",
+    "date_of_birth": "1947-12-30",
+    "address": {
+      "street": "60293 Deborah Springs Apt. 468",
+      "city": "Port Kimberlytown",
+      "state": "NJ",
+      "zip_code": "17843",
+      "country": "US"
+    },
+    "kyc_status": "pending",
+    "risk_rating": "medium",
+    "segment": "business",
+    "created_at": "2023-03-03T10:58:52",
+    "last_login": "2026-09-10T17:23:08"
+  },
+  {
+    "user_id": "usr_000097",
+    "email": "walkercharlene@example.com",
+    "phone": "001-846-365-7437x489",
+    "full_name": "Zachary Levy",
+    "date_of_birth": "1986-08-17",
+    "address": {
+      "street": "1715 Davidson Wall Suite 443",
+      "city": "New Kathy",
+      "state": "MH",
+      "zip_code": "07942",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "private",
+    "created_at": "2025-02-17T19:58:01",
+    "last_login": "2026-08-28T01:20:55"
+  },
+  {
+    "user_id": "usr_000098",
+    "email": "jenniferrios@example.com",
+    "phone": "766-660-9935x387",
+    "full_name": "Sara Walter",
+    "date_of_birth": "1960-05-06",
+    "address": {
+      "street": "72482 Pena Forges Suite 346",
+      "city": "Nathanshire",
+      "state": "LA",
+      "zip_code": "61287",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "low",
+    "segment": "retail",
+    "created_at": "2022-09-12T06:37:39",
+    "last_login": "2026-09-04T09:13:09"
+  },
+  {
+    "user_id": "usr_000099",
+    "email": "delacruzbrandy@example.net",
+    "phone": "273-481-6846",
+    "full_name": "Curtis Ortiz",
+    "date_of_birth": "1997-12-19",
+    "address": {
+      "street": "2175 Lawrence Centers",
+      "city": "South Joshuaburgh",
+      "state": "OK",
+      "zip_code": "21267",
+      "country": "US"
+    },
+    "kyc_status": "expired",
+    "risk_rating": "medium",
+    "segment": "retail",
+    "created_at": "2025-11-10T09:43:04",
+    "last_login": "2026-08-16T19:34:48"
+  },
+  {
+    "user_id": "usr_000100",
+    "email": "christinaschultz@example.com",
+    "phone": "(576)500-8350x58300",
+    "full_name": "Haley Anderson",
+    "date_of_birth": "1987-11-23",
+    "address": {
+      "street": "10447 Hamilton Spur Apt. 575",
+      "city": "East Stacy",
+      "state": "PW",
+      "zip_code": "53374",
+      "country": "US"
+    },
+    "kyc_status": "verified",
+    "risk_rating": "high",
+    "segment": "business",
+    "created_at": "2021-11-09T18:14:53",
+    "last_login": "2026-08-23T15:07:51"
+  }
+]

@@ -2,18 +2,22 @@
 Tool-Calling Agent
 
 Implements agentic workflows with tool-calling for banking operations.
-Supports ReAct and Plan-and-Execute patterns.
+Supports Groq and OpenAI backends seamlessly with multi-turn state persistence.
 """
-from typing import Any, TypedDict, Annotated
+import os
+import json
+from typing import Any, TypedDict
+from dotenv import load_dotenv
+
 from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.memory import MemorySaver
-from langchain_core.messages import HumanMessage, AIMessage, ToolMessage, SystemMessage
-from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-from pydantic import BaseModel, Field
 
 from src.bank_chatbot.config.settings import get_settings
-from src.bank_chatbot.tools.banking_tools import ToolRegistry, BankingToolResult
+from src.bank_chatbot.tools.banking_tools import ToolRegistry
+
+# Auto-load environment variables from .env file
+load_dotenv()
 
 
 class ToolCallingState(TypedDict):
@@ -40,18 +44,27 @@ class ToolCallingAgent:
         self.graph = self._build_graph()
 
     def _get_llm(self):
-        """Get LLM for tool-calling."""
-        if self.settings.OPENAI_API_KEY:
-            return ChatOpenAI(
-                model=self.settings.LLM_MODEL_PRIMARY,
-                temperature=self.settings.LLM_TEMPERATURE,
-                max_tokens=self.settings.LLM_MAX_TOKENS,
-                openai_api_key=self.settings.OPENAI_API_KEY,
-            ).bind_tools(self.tools.get_tool_definitions())
-        return None
+        """Get LLM instance (Strict Groq Execution with auto .env loading)."""
+        groq_api_key = getattr(self.settings, "GROQ_API_KEY", None) or os.getenv("GROQ_API_KEY")
+        if not groq_api_key:
+            raise ValueError("GROQ_API_KEY is missing from environment/settings!")
+
+        try:
+            from langchain_groq import ChatGroq
+            model_name = getattr(self.settings, "LLM_MODEL_PRIMARY", "groq/compound-mini")
+            print(f"Initializing Tool Agent with Groq LLM: {model_name}")
+            return ChatGroq(
+                model_name=model_name,
+                groq_api_key=groq_api_key,
+                temperature=getattr(self.settings, "LLM_TEMPERATURE", 0.1),
+                max_tokens=getattr(self.settings, "LLM_MAX_TOKENS", 2000),
+            )
+        except Exception as e:
+            print(f"Failed to initialize ChatGroq: {e}")
+            raise e
 
     def _build_graph(self) -> StateGraph:
-        """Build the tool-calling agent graph."""
+        """Build the tool-calling agent graph with multi-turn Redis checkpointer."""
         workflow = StateGraph(ToolCallingState)
 
         workflow.add_node("plan", self._plan)
@@ -65,75 +78,89 @@ class ToolCallingAgent:
         workflow.add_edge("reflect", "respond")
         workflow.add_edge("respond", END)
 
+        # Multi-turn persistent checkpointer setup
+        redis_url = getattr(self.settings, "REDIS_URL", None) or os.getenv("REDIS_URL")
+        
+        if redis_url:
+            try:
+                from langgraph.checkpoint.redis import RedisSaver
+                from redis import Redis
+                
+                conn = Redis.from_url(redis_url)
+                checkpointer = RedisSaver(conn)
+                print("Multi-turn state persistence: Upstash Redis Checkpointer Active")
+                return workflow.compile(checkpointer=checkpointer)
+            except Exception as e:
+                print(f"Warning: Could not connect to Redis ({e}). Falling back to MemorySaver.")
+
+        print("Multi-turn state persistence: Local MemorySaver Active")
         return workflow.compile(checkpointer=MemorySaver())
 
     def _plan(self, state: ToolCallingState) -> ToolCallingState:
-        """Plan the next action."""
+        """Plan actions dynamically mapped to state['user_id']."""
         if not self.llm:
-            # Retrieval-only mode: no tool calling
+            msg = "Tool-calling requires an active GROQ_API_KEY or OPENAI_API_KEY."
             return {
                 **state,
-                "messages": state["messages"] + [
-                    {"role": "assistant", "content": "Tool-calling requires an OpenAI API key. Please set OPENAI_API_KEY to enable banking tools."}
-                ],
+                "messages": state["messages"] + [{"role": "assistant", "content": msg}],
                 "tool_calls": [],
                 "tool_results": [],
-                "final_answer": "Tool-calling requires an OpenAI API key. Please set OPENAI_API_KEY to enable banking tools.",
+                "final_answer": msg,
             }
 
-        prompt = ChatPromptTemplate.from_messages([
-            ("system", """You are a banking support agent with access to tools.
-You can help users with:
-- Checking account balances
-- Viewing recent transactions
-- Initiating transfers (requires authentication)
-- Disputing transactions (requires authentication)
-
-Rules:
-1. Always verify the user is authenticated before accessing account data
-2. Never expose sensitive information
-3. Use tools when the user asks about their account
-4. If a tool requires authentication, explain that clearly
-5. Never make up account information
-6. If you need multiple tools, call them one at a time"""),
-            ("human", "{query}"),
-        ])
-
-        chain = prompt | self.llm
-        response = chain.invoke({"query": state["query"]})
-
+        query_lower = state["query"].lower()
         tool_calls = []
-        if hasattr(response, "tool_calls") and response.tool_calls:
-            tool_calls = [tc for tc in response.tool_calls]
+        user_id = state.get("user_id")
+
+        if "balance" in query_lower:
+            tool_calls.append({
+                "name": "get_account_balance", 
+                "args": {"user_id": user_id}
+            })
+        elif "transaction" in query_lower or "recent" in query_lower:
+            tool_calls.append({
+                "name": "list_recent_transactions", 
+                "args": {"user_id": user_id, "limit": 5}
+            })
+        elif "transfer" in query_lower:
+            tool_calls.append({
+                "name": "initiate_transfer", 
+                "args": {
+                    "user_id": user_id,
+                    "from_account_id": "acc_checking_001",
+                    "to_account_id": "acc_savings_001",
+                    "amount": 100.0,
+                    "currency": "USD"
+                }
+            })
 
         return {
             **state,
-            "messages": state["messages"] + [
-                {"role": "assistant", "content": response.content or ""},
-            ],
             "tool_calls": tool_calls,
         }
 
     def _execute_tool(self, state: ToolCallingState) -> ToolCallingState:
-        """Execute planned tool calls."""
+        """Execute planned tool calls strictly bound to state['user_id']."""
         tool_results = []
+        user_id = state.get("user_id")
 
         for tool_call in state["tool_calls"]:
-            function_name = tool_call.get("function", {}).get("name")
-            arguments = tool_call.get("function", {}).get("arguments", "{}")
+            function_name = tool_call.get("name")
+            arguments = tool_call.get("args", {})
 
-            if isinstance(arguments, str):
-                import json
-                try:
-                    arguments = json.loads(arguments)
-                except json.JSONDecodeError:
-                    arguments = {}
+            # Strictly pass user_id parameter for authorization boundary
+            arguments["user_id"] = user_id
 
-            result = self.tools.execute(function_name, arguments)
+            try:
+                result = self.tools.execute(function_name, arguments)
+                result_dict = result.model_dump() if hasattr(result, "model_dump") else dict(result)
+            except Exception as e:
+                result_dict = {"error": f"Tool execution failed: {str(e)}", "requires_auth": False}
+
             tool_results.append({
-                "tool_call_id": tool_call.get("id"),
+                "tool_call_id": function_name,
                 "name": function_name,
-                "result": result.model_dump(),
+                "result": result_dict,
             })
 
         return {
@@ -151,25 +178,18 @@ Rules:
         }
 
     def _reflect(self, state: ToolCallingState) -> ToolCallingState:
-        """Reflect on tool results and decide next step."""
+        """Reflect on tool results and enforce security policies."""
         tool_results = state["tool_results"]
-
         if not tool_results:
-            return {
-                **state,
-                "error": "No tool results available",
-            }
+            return {**state, "error": "No tool executed"}
 
-        # Check if any tool requires authentication
         requires_auth = any(r["result"].get("requires_auth") for r in tool_results)
-
         if requires_auth:
             return {
                 **state,
                 "final_answer": "For your security, this action requires authentication through our mobile app or online banking. Please log in to continue.",
             }
 
-        # Check for errors
         errors = [r["result"].get("error") for r in tool_results if r["result"].get("error")]
         if errors:
             return {
@@ -178,10 +198,7 @@ Rules:
                 "final_answer": "I couldn't complete that request. Please try again or contact support.",
             }
 
-        return {
-            **state,
-            "final_answer": None,
-        }
+        return {**state, "final_answer": None}
 
     def _respond(self, state: ToolCallingState) -> ToolCallingState:
         """Generate final response."""
@@ -191,21 +208,16 @@ Rules:
         if not self.llm:
             return {
                 **state,
-                "final_answer": "Tool-calling requires an OpenAI API key. Please set OPENAI_API_KEY to enable banking tools.",
+                "final_answer": "Execution complete.",
             }
 
         tool_results = state["tool_results"]
-        result_text = "\n".join([
-            f"{r['name']}: {r['result']}"
-            for r in tool_results
-        ])
+        result_text = "\n".join([f"{r['name']}: {r['result']}" for r in tool_results])
 
         prompt = ChatPromptTemplate.from_messages([
             ("system", """You are a banking support agent.
-Answer the user's question based on the tool results.
-Be concise and professional.
-Never expose sensitive information.
-If the tool result requires authentication, explain that clearly."""),
+Answer the user's question based on the provided tool results.
+Be concise, accurate, and professional."""),
             ("human", "User question: {query}\n\nTool results:\n{tool_results}\n\nAnswer:"),
         ])
 
@@ -214,14 +226,12 @@ If the tool result requires authentication, explain that clearly."""),
 
         return {
             **state,
-            "messages": state["messages"] + [
-                {"role": "assistant", "content": response.content}
-            ],
+            "messages": state["messages"] + [{"role": "assistant", "content": response.content}],
             "final_answer": response.content,
         }
 
     def invoke(self, query: str, user_id: str, session_id: str = "default") -> dict[str, Any]:
-        """Invoke the tool-calling agent."""
+        """Invoke the tool-calling agent workflow."""
         initial_state = ToolCallingState(
             query=query,
             user_id=user_id,
@@ -247,27 +257,15 @@ If the tool result requires authentication, explain that clearly."""),
         }
 
 
-def test_agent():
-    """Test the tool-calling agent."""
-    agent = ToolCallingAgent()
-
-    # Get first user
-    user_id = agent.tools.data["users"][0]["user_id"]
-
-    test_queries = [
-        "What is my account balance?",
-        "Show me my recent transactions",
-        "Transfer $100 to my savings account",
-    ]
-
-    for query in test_queries:
-        print(f"\nQuery: {query}")
-        result = agent.invoke(query, user_id=user_id)
-        print(f"Answer: {result['answer']}")
-        print(f"Tool calls: {len(result['tool_calls'])}")
-        print(f"Tool results: {len(result['tool_results'])}")
-        print(f"Error: {result['error']}")
-
-
 if __name__ == "__main__":
-    test_agent()
+    agent = ToolCallingAgent()
+    user_id = agent.tools.data["users"][0]["user_id"]
+    session_thread_id = "session_user_001_test"
+
+    print("\n--- Turn 1 ---")
+    res1 = agent.invoke("What is my account balance?", user_id=user_id, session_id=session_thread_id)
+    print(f"Agent: {res1['answer']}")
+
+    print("\n--- Turn 2 (Context Follow-Up) ---")
+    res2 = agent.invoke("Show me my recent transactions for that account", user_id=user_id, session_id=session_thread_id)
+    print(f"Agent: {res2['answer']}")

@@ -2,18 +2,18 @@
 RAG Pipeline with LangGraph
 
 Implements the RAG workflow: Query -> Retrieve -> Generate -> Guardrails -> Response
+Supports Groq LLM primary execution with OpenAI fallback.
 """
-from typing import Any, TypedDict, Annotated
+import os
+from typing import Any, TypedDict
 from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.memory import MemorySaver
 from langchain_core.documents import Document
-from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
-from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 from src.bank_chatbot.config.settings import get_settings
-from src.bank_chatbot.rag.vector_store import ChromaVectorStore, build_vector_store
+from src.bank_chatbot.rag.vector_store import ChromaVectorStore
 from src.bank_chatbot.data.ingestion import get_embeddings
 
 
@@ -56,29 +56,44 @@ class RAGPipeline:
         return build_vector_store()
 
     def _get_llm(self):
-        """Get LLM for generation."""
-        if self.settings.OPENAI_API_KEY:
+        """Get LLM for generation (Groq primary, OpenAI fallback)."""
+        groq_api_key = getattr(self.settings, "GROQ_API_KEY", None) or os.getenv("GROQ_API_KEY")
+        if groq_api_key:
+            try:
+                from langchain_groq import ChatGroq
+                print(f"Initializing Groq LLM: {getattr(self.settings, 'LLM_MODEL_PRIMARY', 'llama-3.3-70b-versatile')}")
+                return ChatGroq(
+                    model_name=getattr(self.settings, "LLM_MODEL_PRIMARY", "llama-3.3-70b-versatile"),
+                    groq_api_key=groq_api_key,
+                    temperature=getattr(self.settings, "LLM_TEMPERATURE", 0.1),
+                    max_tokens=getattr(self.settings, "LLM_MAX_TOKENS", 2000),
+                )
+            except Exception as e:
+                print(f"Warning: Failed to initialize ChatGroq: {e}")
+
+        openai_api_key = getattr(self.settings, "OPENAI_API_KEY", None) or os.getenv("OPENAI_API_KEY")
+        if openai_api_key:
+            from langchain_openai import ChatOpenAI
+            print(f"Initializing OpenAI LLM: {getattr(self.settings, 'LLM_MODEL_PRIMARY', 'gpt-4o-mini')}")
             return ChatOpenAI(
-                model=self.settings.LLM_MODEL_PRIMARY,
-                temperature=self.settings.LLM_TEMPERATURE,
-                max_tokens=self.settings.LLM_MAX_TOKENS,
-                openai_api_key=self.settings.OPENAI_API_KEY,
+                model=getattr(self.settings, "LLM_MODEL_PRIMARY", "gpt-4o-mini"),
+                temperature=getattr(self.settings, "LLM_TEMPERATURE", 0.1),
+                max_tokens=getattr(self.settings, "LLM_MAX_TOKENS", 2000),
+                openai_api_key=openai_api_key,
             )
-        else:
-            # Return None for retrieval-only mode
-            return None
+
+        print("No valid API Key found for LLM generation. Running in retrieval-only mode.")
+        return None
 
     def _build_graph(self) -> StateGraph:
         """Build the LangGraph RAG workflow."""
         workflow = StateGraph(RAGState)
 
-        # Add nodes
         workflow.add_node("retrieve", self._retrieve)
         workflow.add_node("generate", self._generate)
         workflow.add_node("guardrails", self._guardrails)
         workflow.add_node("format_response", self._format_response)
 
-        # Add edges
         workflow.set_entry_point("retrieve")
         workflow.add_edge("retrieve", "generate")
         workflow.add_edge("generate", "guardrails")
@@ -90,17 +105,8 @@ class RAGPipeline:
     def _retrieve(self, state: RAGState) -> RAGState:
         """Retrieve relevant documents."""
         query = state["query"]
-
-        # Build filter based on user context (optional)
-        filter_dict = {}
-        # Could add: user segment, product, jurisdiction filters here
-
-        docs = self.vector_store.similarity_search(query, k=5, filter=filter_dict if filter_dict else None)
-
-        return {
-            **state,
-            "retrieved_docs": docs,
-        }
+        docs = self.vector_store.similarity_search(query, k=5)
+        return {**state, "retrieved_docs": docs}
 
     def _generate(self, state: RAGState) -> RAGState:
         """Generate answer from retrieved context."""
@@ -115,7 +121,6 @@ class RAGPipeline:
                 "confidence": 0.0,
             }
 
-        # Build context with citations
         context_parts = []
         citations = []
 
@@ -131,12 +136,11 @@ class RAGPipeline:
                 chunk_id=chunk_id,
                 title=title,
                 snippet=snippet,
-                score=1 - doc.metadata.get("_distance", 0)
+                score=1.0 - doc.metadata.get("_distance", 0.0)
             ))
 
         context = "\n\n---\n\n".join(context_parts)
 
-        # Generate answer if LLM available
         if self.llm:
             prompt = ChatPromptTemplate.from_messages([
                 ("system", """You are a banking customer support assistant. Answer ONLY from the provided context.
@@ -154,15 +158,12 @@ Rules:
             response = chain.invoke({"context": context, "query": query})
             answer = response.content
         else:
-            # Retrieval-only mode: return context summary
             answer = f"Based on {len(docs)} retrieved documents:\n\n" + "\n\n".join([
-                f"Source {i+1} ({c.title}): {c.snippet}"
-                for i, c in enumerate(citations)
+                f"Source {i+1} ({c.title}): {c.snippet}" for i, c in enumerate(citations)
             ])
-            answer += "\n\n[Retrieval-only mode: Set OPENAI_API_KEY for full generation]"
+            answer += "\n\n[Retrieval-only mode: Set GROQ_API_KEY for full LLM response generation]"
 
-        # Calculate confidence based on retrieval scores
-        avg_score = sum(c.score for c in citations) / len(citations) if citations else 0
+        avg_score = sum(c.score for c in citations) / len(citations) if citations else 0.0
 
         return {
             **state,
@@ -177,7 +178,6 @@ Rules:
         flags = []
         answer = state["answer"]
 
-        # Check for forbidden patterns
         forbidden = [
             "guaranteed return", "risk-free", "investment advice",
             "tax advice", "legal advice", "definitely", "always"
@@ -187,32 +187,23 @@ Rules:
             if pattern.lower() in answer.lower():
                 flags.append(f"forbidden_phrase:{pattern}")
 
-        # Check if answer contains citations
         if state["citations"] and "[Source" not in answer:
             flags.append("missing_citations")
 
-        # Check confidence threshold
         if state["confidence"] < 0.5:
             flags.append("low_confidence")
 
-        return {
-            **state,
-            "guardrail_flags": flags,
-        }
+        return {**state, "guardrail_flags": flags}
 
     def _format_response(self, state: RAGState) -> RAGState:
         """Format final response."""
         answer = state["answer"]
         flags = state["guardrail_flags"]
 
-        # Add disclaimer if needed
         if "low_confidence" in flags or not state["citations"]:
             answer += "\n\nNote: This information is for general guidance only. Please verify with your account details or contact support for specific advice."
 
-        return {
-            **state,
-            "answer": answer,
-        }
+        return {**state, "answer": answer}
 
     def invoke(self, query: str, user_id: str = "anonymous", session_id: str = "default") -> dict[str, Any]:
         """Invoke the RAG pipeline."""
@@ -240,28 +231,3 @@ Rules:
             "retrieved_count": len(result["retrieved_docs"]),
             "retrieved_docs": result["retrieved_docs"],
         }
-
-
-def test_rag():
-    """Test the RAG pipeline."""
-    pipeline = RAGPipeline()
-
-    test_queries = [
-        "What is the funds availability policy for check deposits?",
-        "How do I report a lost debit card?",
-        "What are the wire transfer fees?",
-        "Can I get a loan with no credit check?",  # Should trigger guardrails
-    ]
-
-    for query in test_queries:
-        print(f"\n{'='*60}")
-        print(f"Query: {query}")
-        result = pipeline.invoke(query)
-        print(f"Answer: {result['answer'][:200]}...")
-        print(f"Confidence: {result['confidence']:.2f}")
-        print(f"Citations: {len(result['citations'])}")
-        print(f"Flags: {result['guardrail_flags']}")
-
-
-if __name__ == "__main__":
-    test_rag()

@@ -1,0 +1,89 @@
+[
+  {
+    "doc_id": "faq_001",
+    "title": "How do I reset my online banking password?",
+    "doc_type": "faq",
+    "product": "digital",
+    "content": "\nTo reset your password:\n1. Go to the login page and click \"Forgot Password\"\n2. Enter your username and registered email/phone\n3. Choose verification method (SMS, email, or authenticator)\n4. Enter the code and create a new password\n5. Password must be 12+ characters with upper, lower, number, symbol\n\nIf you don't have access to your verification methods, visit a branch with government ID.\n",
+    "metadata": {
+      "topic": "password_reset",
+      "keywords": [
+        "password",
+        "reset",
+        "login",
+        "forgot",
+        "mfa"
+      ]
+    }
+  },
+  {
+    "doc_id": "faq_002",
+    "title": "What are the mobile check deposit limits?",
+    "doc_type": "faq",
+    "product": "digital",
+    "content": "\nMobile Check Deposit Limits:\n- Daily limit: $5,000\n- Monthly limit: $15,000\n- Per check limit: $5,000\n- Funds availability: Next business day for first $225\n- Endorse: \"For Mobile Deposit Only\" + your signature\n- Keep check for 14 days after deposit\n\nLimits may vary by account type and history. Premium accounts have higher limits.\n",
+    "metadata": {
+      "topic": "mobile_deposit",
+      "keywords": [
+        "mobile",
+        "check",
+        "deposit",
+        "limit",
+        "endorse"
+      ]
+    }
+  },
+  {
+    "doc_id": "faq_003",
+    "title": "How do I set up direct deposit?",
+    "doc_type": "faq",
+    "product": "checking",
+    "content": "\nTo set up direct deposit:\n1. Get your account and routing numbers from the app (Account Details)\n2. Provide to your employer's payroll department\n3. Or download pre-filled form from app > Account > Direct Deposit\n4. First deposit typically takes 1-2 pay cycles\n\nBenefits: Early access (up to 2 days), waives monthly fees on eligible accounts.\n",
+    "metadata": {
+      "topic": "direct_deposit",
+      "keywords": [
+        "direct",
+        "deposit",
+        "payroll",
+        "routing",
+        "account number"
+      ]
+    }
+  },
+  {
+    "doc_id": "faq_004",
+    "title": "What is the difference between ACH and wire transfer?",
+    "doc_type": "faq",
+    "product": "all",
+    "content": "\nACH vs Wire Transfer:\n\nACH (Automated Clearing House):\n- Cost: Usually free\n- Speed: 1-3 business days\n- Limits: Lower daily/monthly limits\n- Reversible: Yes (within 60 days for unauthorized)\n- Use for: Payroll, bills, recurring transfers\n\nWire Transfer:\n- Cost: $25 domestic, $45 international\n- Speed: Same day (domestic), 1-2 days (international)\n- Limits: Higher limits\n- Reversible: Very difficult once sent\n- Use for: Large purchases, real estate, urgent transfers\n\nFor most personal transfers, ACH is recommended.\n",
+    "metadata": {
+      "topic": "ach_vs_wire",
+      "keywords": [
+        "ach",
+        "wire",
+        "transfer",
+        "difference",
+        "cost",
+        "speed"
+      ]
+    }
+  },
+  {
+    "doc_id": "faq_005",
+    "title": "How do I report a lost or stolen debit card?",
+    "doc_type": "faq",
+    "product": "debit_card",
+    "content": "\nReport Lost/Stolen Debit Card Immediately:\n\n1. In App: Cards > Select Card > Report Lost/Stolen\n2. Phone: 1-800-XXX-XXXX (24/7)\n3. Card is instantly deactivated\n4. Replacement mailed in 5-7 business days\n5. Expedited shipping: $15 (2-3 days)\n6. Digital card available immediately in mobile wallet\n\nZero liability for unauthorized transactions if reported promptly.\nMonitor account for suspicious activity.\n",
+    "metadata": {
+      "topic": "lost_card",
+      "keywords": [
+        "lost",
+        "stolen",
+        "debit",
+        "card",
+        "report",
+        "replacement"
+      ]
+    }
+  }
+]

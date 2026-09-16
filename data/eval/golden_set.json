@@ -1,0 +1,139 @@
+[
+  {
+    "query": "What is the funds availability policy for check deposits?",
+    "expected_answer": "Cash deposits and the first $225 of non-cash deposits are available on the first business day. Local checks take 2 business days, non-local checks take 5 business days.",
+    "context_keywords": [
+      "funds availability",
+      "check",
+      "deposit",
+      "business day",
+      "hold"
+    ]
+  },
+  {
+    "query": "How do I report a lost or stolen debit card?",
+    "expected_answer": "Report immediately via the mobile app (Cards > Select Card > Report Lost/Stolen) or call 1-800-XXX-XXXX. Card is instantly deactivated. Replacement mailed in 5-7 business days. Zero liability for unauthorized transactions.",
+    "context_keywords": [
+      "lost",
+      "stolen",
+      "debit card",
+      "report",
+      "deactivated",
+      "replacement",
+      "zero liability"
+    ]
+  },
+  {
+    "query": "What are the wire transfer fees?",
+    "expected_answer": "Domestic outgoing: $25, Domestic incoming: $15. International outgoing: $45, International incoming: $20. Cutoff: 4 PM ET domestic, 3 PM ET international.",
+    "context_keywords": [
+      "wire",
+      "transfer",
+      "fee",
+      "domestic",
+      "international",
+      "cutoff"
+    ]
+  },
+  {
+    "query": "What is the overdraft fee?",
+    "expected_answer": "Overdraft fee is $35 per item, maximum 4 per day ($140). Continuous overdraft fee: $10/day after 5 days. Overdraft protection transfer: $12.50.",
+    "context_keywords": [
+      "overdraft",
+      "fee",
+      "$35",
+      "per item",
+      "continuous",
+      "protection"
+    ]
+  },
+  {
+    "query": "What are the mobile check deposit limits?",
+    "expected_answer": "Daily limit: $5,000. Monthly limit: $15,000. Per check limit: $5,000. Funds available next business day for first $225. Endorse with 'For Mobile Deposit Only'.",
+    "context_keywords": [
+      "mobile",
+      "check",
+      "deposit",
+      "limit",
+      "daily",
+      "monthly",
+      "endorse"
+    ]
+  },
+  {
+    "query": "How do I set up direct deposit?",
+    "expected_answer": "Get account and routing numbers from app (Account Details). Provide to employer payroll department. Or download pre-filled form from app > Account > Direct Deposit. First deposit takes 1-2 pay cycles.",
+    "context_keywords": [
+      "direct",
+      "deposit",
+      "routing",
+      "account number",
+      "payroll",
+      "form"
+    ]
+  },
+  {
+    "query": "What is the difference between ACH and wire transfer?",
+    "expected_answer": "ACH: Usually free, 1-3 business days, lower limits, reversible within 60 days. Wire: $25 domestic/$45 international, same day domestic, higher limits, very difficult to reverse.",
+    "context_keywords": [
+      "ach",
+      "wire",
+      "transfer",
+      "cost",
+      "speed",
+      "reversible",
+      "limits"
+    ]
+  },
+  {
+    "query": "How do I reset my online banking password?",
+    "expected_answer": "Click 'Forgot Password' on login page. Enter username and registered email/phone. Choose verification method (SMS, email, authenticator). Enter code and create new 12+ character password. Visit branch with ID if no access to verification methods.",
+    "context_keywords": [
+      "password",
+      "reset",
+      "forgot",
+      "verification",
+      "mfa",
+      "branch"
+    ]
+  },
+  {
+    "query": "What is the dispute resolution process for unauthorized transactions?",
+    "expected_answer": "Report within 60 days of statement. Zero liability if reported within 2 business days. Up to $50 liability within 60 days. Unlimited liability after 60 days. Bank provisionally credits within 10 business days. Investigation completes within 45 days (90 for POS/foreign).",
+    "context_keywords": [
+      "dispute",
+      "unauthorized",
+      "transaction",
+      "reg e",
+      "liability",
+      "provisional credit",
+      "investigation"
+    ]
+  },
+  {
+    "query": "What are the monthly maintenance fees for checking accounts?",
+    "expected_answer": "Basic Checking: $12 (waived with $1,500 avg balance or $500 direct deposit). Premium Checking: $25 (waived with $15,000 combined balances). Student Checking: $0 (age 17-24). Senior Checking: $0 (age 65+).",
+    "context_keywords": [
+      "monthly",
+      "maintenance",
+      "fee",
+      "checking",
+      "waived",
+      "balance",
+      "direct deposit",
+      "student",
+      "senior"
+    ]
+  },
+  {
+    "query": "What are the ATM fees for out-of-network and international withdrawals?",
+    "expected_answer": "In-network: $0. Out-of-network US: $3.00. International: $5.00 + 3% currency conversion fee.",
+    "context_keywords": [
+      "atm",
+      "fee",
+      "out-of-network",
+      "international",
+      "currency conversion"
+    ]
+  }
+]

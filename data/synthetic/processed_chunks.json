@@ -1,0 +1,379 @@
+{
+  "chunks": [
+    {
+      "content": "FAQ: How do I reset my online banking password?\n\n\nTo reset your password:\n1. Go to the login page and click \"Forgot Password\"\n2. Enter your username and registered email/phone\n3. Choose verification method (SMS, email, or authenticator)\n4. Enter the code and create a new password\n5. Password must be 12+ characters with upper, lower, number, symbol\n\nIf you don't have access to your verification methods, visit a branch with government ID.",
+      "metadata": {
+        "doc_id": "faq_001",
+        "doc_type": "faqs",
+        "title": "How do I reset my online banking password?",
+        "source": "faqs",
+        "product": "digital",
+        "topic": "password_reset",
+        "keywords": [
+          "password",
+          "reset",
+          "login",
+          "forgot",
+          "mfa"
+        ],
+        "chunk_id": "daa453ebde1b",
+        "chunk_index": 0,
+        "ingested_at": "2026-09-11T15:36:40.026259"
+      }
+    },
+    {
+      "content": "FAQ: What are the mobile check deposit limits?\n\n\nMobile Check Deposit Limits:\n- Daily limit: $5,000\n- Monthly limit: $15,000\n- Per check limit: $5,000\n- Funds availability: Next business day for first $225\n- Endorse: \"For Mobile Deposit Only\" + your signature\n- Keep check for 14 days after deposit\n\nLimits may vary by account type and history. Premium accounts have higher limits.",
+      "metadata": {
+        "doc_id": "faq_002",
+        "doc_type": "faqs",
+        "title": "What are the mobile check deposit limits?",
+        "source": "faqs",
+        "product": "digital",
+        "topic": "mobile_deposit",
+        "keywords": [
+          "mobile",
+          "check",
+          "deposit",
+          "limit",
+          "endorse"
+        ],
+        "chunk_id": "488133ed0975",
+        "chunk_index": 1,
+        "ingested_at": "2026-09-11T15:36:40.026287"
+      }
+    },
+    {
+      "content": "FAQ: How do I set up direct deposit?\n\n\nTo set up direct deposit:\n1. Get your account and routing numbers from the app (Account Details)\n2. Provide to your employer's payroll department\n3. Or download pre-filled form from app > Account > Direct Deposit\n4. First deposit typically takes 1-2 pay cycles\n\nBenefits: Early access (up to 2 days), waives monthly fees on eligible accounts.",
+      "metadata": {
+        "doc_id": "faq_003",
+        "doc_type": "faqs",
+        "title": "How do I set up direct deposit?",
+        "source": "faqs",
+        "product": "checking",
+        "topic": "direct_deposit",
+        "keywords": [
+          "direct",
+          "deposit",
+          "payroll",
+          "routing",
+          "account number"
+        ],
+        "chunk_id": "33de5f8c859a",
+        "chunk_index": 2,
+        "ingested_at": "2026-09-11T15:36:40.026298"
+      }
+    },
+    {
+      "content": "FAQ: What is the difference between ACH and wire transfer?\n\n\nACH vs Wire Transfer:\n\nACH (Automated Clearing House):\n- Cost: Usually free\n- Speed: 1-3 business days\n- Limits: Lower daily/monthly limits\n- Reversible: Yes (within 60 days for unauthorized)\n- Use for: Payroll, bills, recurring transfers",
+      "metadata": {
+        "doc_id": "faq_004",
+        "doc_type": "faqs",
+        "title": "What is the difference between ACH and wire transfer?",
+        "source": "faqs",
+        "product": "all",
+        "topic": "ach_vs_wire",
+        "keywords": [
+          "ach",
+          "wire",
+          "transfer",
+          "difference",
+          "cost",
+          "speed"
+        ],
+        "chunk_id": "5d789b611b42",
+        "chunk_index": 3,
+        "ingested_at": "2026-09-11T15:36:40.026306"
+      }
+    },
+    {
+      "content": "Wire Transfer:\n- Cost: $25 domestic, $45 international\n- Speed: Same day (domestic), 1-2 days (international)\n- Limits: Higher limits\n- Reversible: Very difficult once sent\n- Use for: Large purchases, real estate, urgent transfers\n\nFor most personal transfers, ACH is recommended.",
+      "metadata": {
+        "doc_id": "faq_004",
+        "doc_type": "faqs",
+        "title": "What is the difference between ACH and wire transfer?",
+        "source": "faqs",
+        "product": "all",
+        "topic": "ach_vs_wire",
+        "keywords": [
+          "ach",
+          "wire",
+          "transfer",
+          "difference",
+          "cost",
+          "speed"
+        ],
+        "chunk_id": "dd07f1ef05a7",
+        "chunk_index": 4,
+        "ingested_at": "2026-09-11T15:36:40.026314"
+      }
+    },
+    {
+      "content": "FAQ: How do I report a lost or stolen debit card?\n\n\nReport Lost/Stolen Debit Card Immediately:\n\n1. In App: Cards > Select Card > Report Lost/Stolen\n2. Phone: 1-800-XXX-XXXX (24/7)\n3. Card is instantly deactivated\n4. Replacement mailed in 5-7 business days\n5. Expedited shipping: $15 (2-3 days)\n6. Digital card available immediately in mobile wallet\n\nZero liability for unauthorized transactions if reported promptly.\nMonitor account for suspicious activity.",
+      "metadata": {
+        "doc_id": "faq_005",
+        "doc_type": "faqs",
+        "title": "How do I report a lost or stolen debit card?",
+        "source": "faqs",
+        "product": "debit_card",
+        "topic": "lost_card",
+        "keywords": [
+          "lost",
+          "stolen",
+          "debit",
+          "card",
+          "report",
+          "replacement"
+        ],
+        "chunk_id": "b550c14b3eb2",
+        "chunk_index": 5,
+        "ingested_at": "2026-09-11T15:36:40.026322"
+      }
+    },
+    {
+      "content": "POLICY: Funds Availability Policy\n\n\nFunds Availability Policy\n\n1. General Availability\nCash deposits, wire transfers, and the first $225 of a day's non-cash deposits are available on the first business day after deposit.\n\n2. Case-by-Case Delays\nWe may delay availability up to 7 business days for:\n- New accounts (open < 30 days)\n- Large deposits (> $5,525)\n- Redeposited checks\n- Repeated overdraft accounts\n- Emergency conditions",
+      "metadata": {
+        "doc_id": "pol_001",
+        "doc_type": "policies",
+        "title": "Funds Availability Policy",
+        "source": "policies",
+        "product": "all",
+        "jurisdiction": "US",
+        "version": "2024.1",
+        "effective_date": "2024-01-01",
+        "topic": "funds_availability",
+        "keywords": [
+          "hold",
+          "deposit",
+          "availability",
+          "check"
+        ],
+        "chunk_id": "5ed552af7db6",
+        "chunk_index": 6,
+        "ingested_at": "2026-09-11T15:36:40.026331"
+      }
+    },
+    {
+      "content": "3. Check Hold Schedule\n- Local checks: 2 business days\n- Non-local checks: 5 business days\n- Treasury checks: Next business day\n- Cashier's checks: Next business day\n\n4. Exceptions\nFederal regulations (Reg CC) govern maximum hold periods. Contact us for specific cases.",
+      "metadata": {
+        "doc_id": "pol_001",
+        "doc_type": "policies",
+        "title": "Funds Availability Policy",
+        "source": "policies",
+        "product": "all",
+        "jurisdiction": "US",
+        "version": "2024.1",
+        "effective_date": "2024-01-01",
+        "topic": "funds_availability",
+        "keywords": [
+          "hold",
+          "deposit",
+          "availability",
+          "check"
+        ],
+        "chunk_id": "67414cf9becc",
+        "chunk_index": 7,
+        "ingested_at": "2026-09-11T15:36:40.026339"
+      }
+    },
+    {
+      "content": "POLICY: Wire Transfer Policy\n\n\nWire Transfer Policy\n\n1. Domestic Wires\n- Cutoff: 4:00 PM ET for same-day processing\n- Fee: $25 outgoing, $15 incoming\n- Limits: $100,000 daily (retail), $1,000,000 (premium)\n\n2. International Wires\n- Cutoff: 3:00 PM ET\n- Fee: $45 outgoing, $20 incoming\n- SWIFT required for all international transfers\n- Additional intermediary bank fees may apply",
+      "metadata": {
+        "doc_id": "pol_002",
+        "doc_type": "policies",
+        "title": "Wire Transfer Policy",
+        "source": "policies",
+        "product": "all",
+        "jurisdiction": "US",
+        "version": "2024.1",
+        "effective_date": "2024-01-01",
+        "topic": "wire_transfer",
+        "keywords": [
+          "wire",
+          "transfer",
+          "swift",
+          "international",
+          "domestic"
+        ],
+        "chunk_id": "0949fa0e082b",
+        "chunk_index": 8,
+        "ingested_at": "2026-09-11T15:36:40.026347"
+      }
+    },
+    {
+      "content": "3. Information Required\n- Recipient full name and address\n- Recipient bank name, address, SWIFT/BIC\n- Recipient account number/IBAN\n- Purpose of payment\n- Your account number\n\n4. Cancellations\nOnce processed, wires cannot be cancelled. Contact recipient bank for recall (fees apply).",
+      "metadata": {
+        "doc_id": "pol_002",
+        "doc_type": "policies",
+        "title": "Wire Transfer Policy",
+        "source": "policies",
+        "product": "all",
+        "jurisdiction": "US",
+        "version": "2024.1",
+        "effective_date": "2024-01-01",
+        "topic": "wire_transfer",
+        "keywords": [
+          "wire",
+          "transfer",
+          "swift",
+          "international",
+          "domestic"
+        ],
+        "chunk_id": "f80a357579fa",
+        "chunk_index": 9,
+        "ingested_at": "2026-09-11T15:36:40.026354"
+      }
+    },
+    {
+      "content": "POLICY: Dispute Resolution Process\n\n\nDispute Resolution Process\n\n1. Unauthorized Transactions (Reg E)\n- Report within 60 days of statement date\n- Zero liability if reported within 2 business days\n- Up to $50 liability if reported within 60 days\n- Unlimited liability after 60 days\n\n2. Billing Errors (Reg Z)\n- Report within 60 days of statement\n- We must acknowledge within 10 business days\n- Resolution within 90 days (2 billing cycles)",
+      "metadata": {
+        "doc_id": "pol_003",
+        "doc_type": "policies",
+        "title": "Dispute Resolution Process",
+        "source": "policies",
+        "product": "all",
+        "jurisdiction": "US",
+        "version": "2024.1",
+        "effective_date": "2024-01-01",
+        "topic": "disputes",
+        "keywords": [
+          "dispute",
+          "unauthorized",
+          "fraud",
+          "chargeback",
+          "reg e",
+          "reg z"
+        ],
+        "chunk_id": "f5ba90924d23",
+        "chunk_index": 10,
+        "ingested_at": "2026-09-11T15:36:40.026362"
+      }
+    },
+    {
+      "content": "3. Process\na. Contact us immediately via phone, app, or branch\nb. We provisionally credit within 10 business days\nc. Investigation completes within 45 days (90 for POS/foreign)\nd. Final determination with explanation\n\n4. Merchant Disputes\nAttempt resolution with merchant first. Provide documentation.",
+      "metadata": {
+        "doc_id": "pol_003",
+        "doc_type": "policies",
+        "title": "Dispute Resolution Process",
+        "source": "policies",
+        "product": "all",
+        "jurisdiction": "US",
+        "version": "2024.1",
+        "effective_date": "2024-01-01",
+        "topic": "disputes",
+        "keywords": [
+          "dispute",
+          "unauthorized",
+          "fraud",
+          "chargeback",
+          "reg e",
+          "reg z"
+        ],
+        "chunk_id": "7c88c6791db0",
+        "chunk_index": 11,
+        "ingested_at": "2026-09-11T15:36:40.026369"
+      }
+    },
+    {
+      "content": "POLICY: Account Security & Authentication\n\n\nAccount Security & Authentication Policy\n\n1. Multi-Factor Authentication (MFA)\n- Required for all digital banking access\n- Options: SMS, Authenticator App, Security Key, Biometric\n- At least one factor must be \"something you have\"\n\n2. Session Management\n- Idle timeout: 10 minutes (mobile), 5 minutes (web)\n- Maximum session: 8 hours\n- Re-authentication for sensitive actions",
+      "metadata": {
+        "doc_id": "pol_004",
+        "doc_type": "policies",
+        "title": "Account Security & Authentication",
+        "source": "policies",
+        "product": "all",
+        "jurisdiction": "US",
+        "version": "2024.2",
+        "effective_date": "2024-06-01",
+        "topic": "security",
+        "keywords": [
+          "mfa",
+          "authentication",
+          "security",
+          "fraud",
+          "device",
+          "recovery"
+        ],
+        "chunk_id": "a62b039704c8",
+        "chunk_index": 12,
+        "ingested_at": "2026-09-11T15:36:40.026376"
+      }
+    },
+    {
+      "content": "3. Device Registration\n- Trusted devices remember for 90 days\n- New device requires MFA + email confirmation\n- Maximum 5 trusted devices per user\n\n4. Fraud Monitoring\n- Real-time transaction scoring\n- Automatic block for high-risk patterns\n- SMS/email alerts for suspicious activity\n\n5. Account Recovery\n- Identity verification required\n- In-person at branch with government ID\n- Or video verification with two documents",
+      "metadata": {
+        "doc_id": "pol_004",
+        "doc_type": "policies",
+        "title": "Account Security & Authentication",
+        "source": "policies",
+        "product": "all",
+        "jurisdiction": "US",
+        "version": "2024.2",
+        "effective_date": "2024-06-01",
+        "topic": "security",
+        "keywords": [
+          "mfa",
+          "authentication",
+          "security",
+          "fraud",
+          "device",
+          "recovery"
+        ],
+        "chunk_id": "c66157ba6ac0",
+        "chunk_index": 13,
+        "ingested_at": "2026-09-11T15:36:40.026384"
+      }
+    },
+    {
+      "content": "POLICY: Overdraft & Fee Schedule\n\n\nOverdraft & Fee Schedule\n\n1. Overdraft Fees\n- Per item: $35 (max 4 per day = $140)\n- Continuous overdraft (>5 days): $10/day\n- Overdraft protection transfer: $12.50\n\n2. Monthly Maintenance\n- Basic Checking: $12 (waived with $1,500 avg balance or $500 direct deposit)\n- Premium Checking: $25 (waived with $15,000 combined balances)\n- Student Checking: $0 (age 17-24)\n- Senior Checking: $0 (age 65+)",
+      "metadata": {
+        "doc_id": "pol_005",
+        "doc_type": "policies",
+        "title": "Overdraft & Fee Schedule",
+        "source": "policies",
+        "product": "checking",
+        "jurisdiction": "US",
+        "version": "2024.1",
+        "effective_date": "2024-01-01",
+        "topic": "fees",
+        "keywords": [
+          "overdraft",
+          "fee",
+          "maintenance",
+          "atm",
+          "stop payment"
+        ],
+        "chunk_id": "cf0eaa4e03c7",
+        "chunk_index": 14,
+        "ingested_at": "2026-09-11T15:36:40.026391"
+      }
+    },
+    {
+      "content": "3. ATM Fees\n- In-network: $0\n- Out-of-network US: $3.00\n- International: $5.00 + 3% currency conversion\n\n4. Other Fees\n- Stop payment: $30\n- Cashier's check: $10\n- Money order: $5\n- Paper statement: $3\n- Account research: $25/hour",
+      "metadata": {
+        "doc_id": "pol_005",
+        "doc_type": "policies",
+        "title": "Overdraft & Fee Schedule",
+        "source": "policies",
+        "product": "checking",
+        "jurisdiction": "US",
+        "version": "2024.1",
+        "effective_date": "2024-01-01",
+        "topic": "fees",
+        "keywords": [
+          "overdraft",
+          "fee",
+          "maintenance",
+          "atm",
+          "stop payment"
+        ],
+        "chunk_id": "0014d8560690",
+        "chunk_index": 15,
+        "ingested_at": "2026-09-11T15:36:40.026398"
+      }
+    }
+  ],
+  "embeddings_shape": [
+    16,
+    384
+  ]
+}

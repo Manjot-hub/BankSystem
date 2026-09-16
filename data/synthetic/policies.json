@@ -1,0 +1,103 @@
+[
+  {
+    "doc_id": "pol_001",
+    "title": "Funds Availability Policy",
+    "doc_type": "policy",
+    "product": "all",
+    "jurisdiction": "US",
+    "version": "2024.1",
+    "effective_date": "2024-01-01",
+    "content": "\nFunds Availability Policy\n\n1. General Availability\nCash deposits, wire transfers, and the first $225 of a day's non-cash deposits are available on the first business day after deposit.\n\n2. Case-by-Case Delays\nWe may delay availability up to 7 business days for:\n- New accounts (open < 30 days)\n- Large deposits (> $5,525)\n- Redeposited checks\n- Repeated overdraft accounts\n- Emergency conditions\n\n3. Check Hold Schedule\n- Local checks: 2 business days\n- Non-local checks: 5 business days\n- Treasury checks: Next business day\n- Cashier's checks: Next business day\n\n4. Exceptions\nFederal regulations (Reg CC) govern maximum hold periods. Contact us for specific cases.\n",
+    "metadata": {
+      "topic": "funds_availability",
+      "keywords": [
+        "hold",
+        "deposit",
+        "availability",
+        "check"
+      ]
+    }
+  },
+  {
+    "doc_id": "pol_002",
+    "title": "Wire Transfer Policy",
+    "doc_type": "policy",
+    "product": "all",
+    "jurisdiction": "US",
+    "version": "2024.1",
+    "effective_date": "2024-01-01",
+    "content": "\nWire Transfer Policy\n\n1. Domestic Wires\n- Cutoff: 4:00 PM ET for same-day processing\n- Fee: $25 outgoing, $15 incoming\n- Limits: $100,000 daily (retail), $1,000,000 (premium)\n\n2. International Wires\n- Cutoff: 3:00 PM ET\n- Fee: $45 outgoing, $20 incoming\n- SWIFT required for all international transfers\n- Additional intermediary bank fees may apply\n\n3. Information Required\n- Recipient full name and address\n- Recipient bank name, address, SWIFT/BIC\n- Recipient account number/IBAN\n- Purpose of payment\n- Your account number\n\n4. Cancellations\nOnce processed, wires cannot be cancelled. Contact recipient bank for recall (fees apply).\n",
+    "metadata": {
+      "topic": "wire_transfer",
+      "keywords": [
+        "wire",
+        "transfer",
+        "swift",
+        "international",
+        "domestic"
+      ]
+    }
+  },
+  {
+    "doc_id": "pol_003",
+    "title": "Dispute Resolution Process",
+    "doc_type": "policy",
+    "product": "all",
+    "jurisdiction": "US",
+    "version": "2024.1",
+    "effective_date": "2024-01-01",
+    "content": "\nDispute Resolution Process\n\n1. Unauthorized Transactions (Reg E)\n- Report within 60 days of statement date\n- Zero liability if reported within 2 business days\n- Up to $50 liability if reported within 60 days\n- Unlimited liability after 60 days\n\n2. Billing Errors (Reg Z)\n- Report within 60 days of statement\n- We must acknowledge within 10 business days\n- Resolution within 90 days (2 billing cycles)\n\n3. Process\na. Contact us immediately via phone, app, or branch\nb. We provisionally credit within 10 business days\nc. Investigation completes within 45 days (90 for POS/foreign)\nd. Final determination with explanation\n\n4. Merchant Disputes\nAttempt resolution with merchant first. Provide documentation.\n",
+    "metadata": {
+      "topic": "disputes",
+      "keywords": [
+        "dispute",
+        "unauthorized",
+        "fraud",
+        "chargeback",
+        "reg e",
+        "reg z"
+      ]
+    }
+  },
+  {
+    "doc_id": "pol_004",
+    "title": "Account Security & Authentication",
+    "doc_type": "policy",
+    "product": "all",
+    "jurisdiction": "US",
+    "version": "2024.2",
+    "effective_date": "2024-06-01",
+    "content": "\nAccount Security & Authentication Policy\n\n1. Multi-Factor Authentication (MFA)\n- Required for all digital banking access\n- Options: SMS, Authenticator App, Security Key, Biometric\n- At least one factor must be \"something you have\"\n\n2. Session Management\n- Idle timeout: 10 minutes (mobile), 5 minutes (web)\n- Maximum session: 8 hours\n- Re-authentication for sensitive actions\n\n3. Device Registration\n- Trusted devices remember for 90 days\n- New device requires MFA + email confirmation\n- Maximum 5 trusted devices per user\n\n4. Fraud Monitoring\n- Real-time transaction scoring\n- Automatic block for high-risk patterns\n- SMS/email alerts for suspicious activity\n\n5. Account Recovery\n- Identity verification required\n- In-person at branch with government ID\n- Or video verification with two documents\n",
+    "metadata": {
+      "topic": "security",
+      "keywords": [
+        "mfa",
+        "authentication",
+        "security",
+        "fraud",
+        "device",
+        "recovery"
+      ]
+    }
+  },
+  {
+    "doc_id": "pol_005",
+    "title": "Overdraft & Fee Schedule",
+    "doc_type": "policy",
+    "product": "checking",
+    "jurisdiction": "US",
+    "version": "2024.1",
+    "effective_date": "2024-01-01",
+    "content": "\nOverdraft & Fee Schedule\n\n1. Overdraft Fees\n- Per item: $35 (max 4 per day = $140)\n- Continuous overdraft (>5 days): $10/day\n- Overdraft protection transfer: $12.50\n\n2. Monthly Maintenance\n- Basic Checking: $12 (waived with $1,500 avg balance or $500 direct deposit)\n- Premium Checking: $25 (waived with $15,000 combined balances)\n- Student Checking: $0 (age 17-24)\n- Senior Checking: $0 (age 65+)\n\n3. ATM Fees\n- In-network: $0\n- Out-of-network US: $3.00\n- International: $5.00 + 3% currency conversion\n\n4. Other Fees\n- Stop payment: $30\n- Cashier's check: $10\n- Money order: $5\n- Paper statement: $3\n- Account research: $25/hour\n",
+    "metadata": {
+      "topic": "fees",
+      "keywords": [
+        "overdraft",
+        "fee",
+        "maintenance",
+        "atm",
+        "stop payment"
+      ]
+    }
+  }
+]
