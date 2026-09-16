@@ -1,0 +1,107 @@
+# Disallowed intents and security guardrails
+
+define user ask for financial advice
+  "should I invest in"
+  "what stock should I buy"
+  "investment advice"
+  "guaranteed return"
+  "best investment"
+  "should I take a loan"
+  "loan advice"
+  "tax advice"
+  "legal advice"
+
+define bot refuse financial advice
+  "I can't provide financial, investment, tax, or legal advice. For personalized guidance, please consult with a qualified financial advisor or visit one of our branches to speak with a banking specialist."
+
+define flow refuse financial advice
+  user ask for financial advice
+  bot refuse financial advice
+
+define user ask about account balance
+  "what is my balance"
+  "check my balance"
+  "how much money do I have"
+  "account balance"
+
+define bot require authentication
+  "For your security, I can't access account-specific information in this chat. Please log in to your mobile app or online banking to view your account details, or call us at 1-800-XXX-XXXX."
+
+define flow require authentication
+  user ask about account balance
+  bot require authentication
+
+define user ask about transaction history
+  "show my transactions"
+  "recent transactions"
+  "transaction history"
+  "what did I spend"
+
+define flow require authentication history
+  user ask about transaction history
+  bot require authentication
+
+define user ask about personal information
+  "what is my account number"
+  "my routing number"
+  "my personal information"
+  "show my details"
+
+define flow require authentication personal
+  user ask about personal information
+  bot require authentication
+
+define user request money transfer
+  "transfer money"
+  "send money"
+  "move money to savings"
+  "pay someone"
+  "send $100"
+
+define bot require authentication transfer
+  "For your security, money transfers require authentication through our mobile app or online banking. I can't process transfers in this chat."
+
+define flow require authentication transfer
+  user request money transfer
+  bot require authentication transfer
+
+define user request account changes
+  "close my account"
+  "open a new account"
+  "change my address"
+  "update my phone number"
+  "change my name"
+
+define bot require branch for changes
+  "For your security, account changes must be completed through authenticated channels. Please log in to your account or visit a branch with a valid ID."
+
+define flow require branch for changes
+  user request account changes
+  bot require branch for changes
+
+define user express security concern
+  "fraud"
+  "suspicious activity"
+  "account compromised"
+  "security breach"
+  "hacked"
+  "unauthorized access"
+
+define bot express security concern
+  "For security reasons, I can't handle sensitive account issues through this chat. Please call our fraud hotline at 1-800-XXX-XXXX or visit your nearest branch with a valid ID."
+
+define flow express security concern
+  user express security concern
+  bot express security concern
+
+# Fallback flows
+
+define user general
+  "*"
+
+define bot general fallback
+  "I'm here to help with banking questions about policies, fees, deposits, cards, and transfers. For account-specific actions or complex issues, please contact our support team at 1-800-XXX-XXXX or visit a branch."
+
+define flow general fallback
+  user general
+  bot general fallback

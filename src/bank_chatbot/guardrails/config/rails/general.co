@@ -1,0 +1,177 @@
+# General conversation flows
+
+define user express greeting
+  "hello"
+  "hi"
+  "good morning"
+  "good afternoon"
+  "hey"
+
+define bot express greeting
+  "Hello! I'm your banking support assistant. How can I help you today?"
+
+define user express gratitude
+  "thank you"
+  "thanks"
+  "thank you very much"
+
+define bot express gratitude
+  "You're welcome! Is there anything else I can help you with?"
+
+define user express goodbye
+  "goodbye"
+  "bye"
+  "see you"
+  "exit"
+
+define bot express goodbye
+  "Thank you for banking with us. Have a great day!"
+
+# Banking policy flows
+
+define user ask about funds availability
+  "when will my deposit be available"
+  "how long does a check hold"
+  "funds availability"
+  "when can I withdraw my deposit"
+  "check hold"
+  "deposit hold"
+
+define bot provide funds availability info
+  "Here's our funds availability policy: Cash deposits and the first $225 of non-cash deposits are available on the first business day. Local checks are available within 2 business days, and non-local checks within 5 business days. Please note that holds may apply to new accounts or large deposits."
+
+define flow funds availability
+  user ask about funds availability
+  bot provide funds availability info
+
+define user ask about lost card
+  "I lost my card"
+  "my card is stolen"
+  "report lost card"
+  "lost debit card"
+  "stolen card"
+  "card stolen"
+
+define bot provide lost card info
+  "If your card is lost or stolen, report it immediately through the mobile app (Cards > Select Card > Report Lost/Stolen) or call 1-800-XXX-XXXX. Your card will be deactivated instantly, and a replacement will be mailed within 5-7 business days. You have zero liability for unauthorized transactions when reported promptly."
+
+define flow lost card
+  user ask about lost card
+  bot provide lost card info
+
+define user ask about wire transfer
+  "wire transfer"
+  "international wire"
+  "domestic wire"
+  "wire fees"
+  "send money by wire"
+
+define bot provide wire transfer info
+  "Wire transfer fees are: $25 for domestic outgoing, $15 for domestic incoming, $45 for international outgoing, and $20 for international incoming. Domestic wires must be submitted by 4:00 PM ET for same-day processing. International wires have a 3:00 PM ET cutoff."
+
+define flow wire transfer
+  user ask about wire transfer
+  bot provide wire transfer info
+
+define user ask about overdraft
+  "overdraft fee"
+  "overdraft protection"
+  "insufficient funds"
+  "negative balance fee"
+
+define bot provide overdraft info
+  "Our overdraft fee is $35 per item, with a maximum of 4 fees per day ($140 total). Continuous overdraft fees are $10 per day after 5 days. Overdraft protection transfers cost $12.50 each."
+
+define flow overdraft
+  user ask about overdraft
+  bot provide overdraft info
+
+define user ask about mobile deposit
+  "mobile check deposit"
+  "deposit a check on my phone"
+  "mobile deposit limit"
+  "check deposit limit"
+
+define bot provide mobile deposit info
+  "Mobile check deposit limits are: $5,000 daily, $15,000 monthly, and $5,000 per check. The first $225 is available the next business day. Please endorse checks with 'For Mobile Deposit Only' followed by your signature."
+
+define flow mobile deposit
+  user ask about mobile deposit
+  bot provide mobile deposit info
+
+define user ask about direct deposit
+  "set up direct deposit"
+  "direct deposit"
+  "payroll deposit"
+  "how to get paid by direct deposit"
+
+define bot provide direct deposit info
+  "To set up direct deposit, get your account and routing numbers from the app (Account Details) and provide them to your employer's payroll department. You can also download a pre-filled form from the app under Account > Direct Deposit."
+
+define flow direct deposit
+  user ask about direct deposit
+  bot provide direct deposit info
+
+define user ask about ach vs wire
+  "ach vs wire"
+  "difference between ach and wire"
+  "which is better ach or wire"
+
+define bot provide ach wire comparison
+  "ACH transfers are usually free, take 1-3 business days, and are reversible within 60 days for unauthorized transactions. Wire transfers cost $25 domestic or $45 international, are faster (same day domestic), and are very difficult to reverse once sent."
+
+define flow ach vs wire
+  user ask about ach vs wire
+  bot provide ach wire comparison
+
+define user ask about password reset
+  "reset my password"
+  "forgot my password"
+  "can't log in"
+  "password reset"
+
+define bot provide password reset info
+  "To reset your password, click 'Forgot Password' on the login page, enter your username and registered email or phone, then choose your verification method. Create a new password with at least 12 characters including uppercase, lowercase, numbers, and symbols."
+
+define flow password reset
+  user ask about password reset
+  bot provide password reset info
+
+define user ask about disputes
+  "dispute a transaction"
+  "unauthorized transaction"
+  "fraudulent charge"
+  "I didn't make this purchase"
+  "chargeback"
+
+define bot provide dispute info
+  "For unauthorized transactions, report within 60 days of your statement date. You have zero liability if reported within 2 business days, up to $50 liability within 60 days, and unlimited liability after 60 days. We provisionally credit your account within 10 business days while investigating."
+
+define flow disputes
+  user ask about disputes
+  bot provide dispute info
+
+define user ask about maintenance fees
+  "monthly fee"
+  "maintenance fee"
+  "account fee"
+  "checking account fee"
+
+define bot provide maintenance fee info
+  "Basic Checking has a $12 monthly fee, waived with a $1,500 average balance or $500 direct deposit. Premium Checking is $25, waived with $15,000 in combined balances. Student and Senior Checking accounts have no monthly fee."
+
+define flow maintenance fees
+  user ask about maintenance fees
+  bot provide maintenance fee info
+
+define user ask about atm fees
+  "atm fee"
+  "out of network atm"
+  "international atm fee"
+
+define bot provide atm fee info
+  "ATM fees are: $0 at in-network ATMs, $3.00 at out-of-network US ATMs, and $5.00 plus 3% currency conversion for international ATMs."
+
+define flow atm fees
+  user ask about atm fees
+  bot provide atm fee info

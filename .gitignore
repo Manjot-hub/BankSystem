@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local data / caches
+data/chroma_db/
+data/eval/results_latest.json
+*.sqlite3
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Logs
+logs/
+*.log
+
+# Local app/runtime artifacts
+.railway/
+.venv/
+venv/
+ENV/
+env/
+*.local
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# OS
+Thumbs.db
+
+1789105831725-banking-chatbot-roadmap.md
+interviewPrep.txt
+summary.txt
+whatsBuilt.txt
