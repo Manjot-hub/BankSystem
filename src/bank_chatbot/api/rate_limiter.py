@@ -38,7 +38,11 @@ class TokenBucketRateLimiter:
                 reset_after = 0.0
             else:
                 allowed = False
-                reset_after = (1.0 - tokens) / self.refill_rate
+                # Prevent ZeroDivisionError when refill_rate is 0
+                if self.refill_rate > 0:
+                    reset_after = (1.0 - tokens) / self.refill_rate
+                else:
+                    reset_after = 60.0
 
             self._buckets[key] = (tokens, now)
             remaining = max(0, int(tokens))
