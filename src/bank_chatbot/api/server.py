@@ -29,9 +29,9 @@ logger = structlog.get_logger()
 settings = get_settings()
 
 # Initialize Singletons
-pipeline = RAGPipeline()
-agent = ToolCallingAgent()
-guardrails = BankingGuardrails()
+pipeline = None
+agent = None
+guardrails = None
 
 def get_or_create_counter(name: str, documentation: str, labelnames: list[str]):
     """Prevent DuplicateTimeseries errors during Uvicorn auto-reloads."""
@@ -103,7 +103,14 @@ class AgentChatResponse(BaseModel):
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    global pipeline, agent, guardrails
     logger.info("Starting single-agent banking chatbot server")
+    
+    # Initialize heavy components inside lifespan
+    guardrails = BankingGuardrails()
+    pipeline = RAGPipeline()
+    agent = ToolCallingAgent()
+    
     yield
     logger.info("Stopping banking chatbot server")
 
