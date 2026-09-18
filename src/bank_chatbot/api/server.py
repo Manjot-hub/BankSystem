@@ -28,10 +28,38 @@ from src.bank_chatbot.api.auth import APIKeyAuthMiddleware
 logger = structlog.get_logger()
 settings = get_settings()
 
-# Initialize Singletons
-pipeline = None
-agent = None
-guardrails = None
+# Initialize global singletons as None for deferred/lazy loading
+_pipeline: Optional[RAGPipeline] = None
+_agent: Optional[ToolCallingAgent] = None
+_guardrails: Optional[BankingGuardrails] = None
+
+
+def get_pipeline() -> RAGPipeline:
+    """Lazy loader for RAGPipeline to prevent port binding timeouts."""
+    global _pipeline
+    if _pipeline is None:
+        logger.info("Initializing RAGPipeline lazily...")
+        _pipeline = RAGPipeline()
+    return _pipeline
+
+
+def get_agent() -> ToolCallingAgent:
+    """Lazy loader for ToolCallingAgent to prevent port binding timeouts."""
+    global _agent
+    if _agent is None:
+        logger.info("Initializing ToolCallingAgent lazily...")
+        _agent = ToolCallingAgent()
+    return _agent
+
+
+def get_guardrails() -> BankingGuardrails:
+    """Lazy loader for BankingGuardrails to prevent port binding timeouts."""
+    global _guardrails
+    if _guardrails is None:
+        logger.info("Initializing BankingGuardrails lazily...")
+        _guardrails = BankingGuardrails()
+    return _guardrails
+
 
 def get_or_create_counter(name: str, documentation: str, labelnames: list[str]):
     """Prevent DuplicateTimeseries errors during Uvicorn auto-reloads."""
@@ -39,11 +67,13 @@ def get_or_create_counter(name: str, documentation: str, labelnames: list[str]):
         return REGISTRY._names_to_collectors[name]
     return Counter(name, documentation, labelnames)
 
+
 def get_or_create_histogram(name: str, documentation: str, labelnames: list[str] = None):
     """Prevent DuplicateTimeseries errors during Uvicorn auto-reloads."""
     if name in REGISTRY._names_to_collectors:
         return REGISTRY._names_to_collectors[name]
     return Histogram(name, documentation, labelnames or [])
+
 
 # Prometheus metrics (re-load safe)
 REQUEST_COUNT = get_or_create_counter(
@@ -103,14 +133,8 @@ class AgentChatResponse(BaseModel):
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    global pipeline, agent, guardrails
+    """Lightweight lifespan context to allow immediate port binding."""
     logger.info("Starting single-agent banking chatbot server")
-    
-    # Initialize heavy components inside lifespan
-    guardrails = BankingGuardrails()
-    pipeline = RAGPipeline()
-    agent = ToolCallingAgent()
-    
     yield
     logger.info("Stopping banking chatbot server")
 
@@ -178,8 +202,12 @@ async def agent_chat(request: ChatRequest):
     request_id = str(uuid.uuid4())
     start_time = time.time()
 
+    # Lazy-load guardrails and agent
+    guardrails_inst = get_guardrails()
+    agent_inst = get_agent()
+
     # 1. Input Guardrail Verification
-    guardrail_result = guardrails.process_message(request.message)
+    guardrail_result = guardrails_inst.process_message(request.message)
     if not guardrail_result["allowed"]:
         GUARDRAIL_BLOCKS.labels(reason="input_blocked").inc()
         return AgentChatResponse(
@@ -193,7 +221,7 @@ async def agent_chat(request: ChatRequest):
 
     # 2. Invoke Single-Agent Graph
     try:
-        result = agent.invoke(
+        result = agent_inst.invoke(
             query=request.message,
             user_id=request.user_id,
             session_id=request.session_id,
@@ -219,7 +247,11 @@ async def chat(request: ChatRequest):
     request_id = str(uuid.uuid4())
     start_time = time.time()
 
-    guardrail_result = guardrails.process_message(request.message)
+    # Lazy-load guardrails and pipeline
+    guardrails_inst = get_guardrails()
+    pipeline_inst = get_pipeline()
+
+    guardrail_result = guardrails_inst.process_message(request.message)
     if not guardrail_result["allowed"]:
         return ChatResponse(
             response="I'm sorry, but I can't process that request due to security policies.",
@@ -231,7 +263,7 @@ async def chat(request: ChatRequest):
             latency_ms=(time.time() - start_time) * 1000,
         )
 
-    rag_result = pipeline.invoke(
+    rag_result = pipeline_inst.invoke(
         query=request.message,
         user_id=request.user_id,
         session_id=request.session_id,
@@ -255,7 +287,7 @@ async def health_check():
 
 @app.get("/ready")
 async def readiness_check():
-    return {"status": "ready", "agent_active": agent is not None}
+    return {"status": "ready", "agent_active": _agent is not None}
 
 
 @app.get("/metrics")
