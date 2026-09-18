@@ -3,6 +3,8 @@ FastAPI Server for Banking Chatbot
 
 Exposes single-agent tool execution, RAG pipeline, guardrails, and observability.
 """
+import os
+import uvicorn
 import time
 import uuid
 import structlog
@@ -259,5 +261,5 @@ FastAPIInstrumentor.instrument_app(app)
 
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("src.bank_chatbot.api.server:app", host="0.0.0.0", port=8000, reload=False)
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run("src.bank_chatbot.api.server:app", host="0.0.0.0", port=port)
