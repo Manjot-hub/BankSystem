@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     EMBEDDING_BATCH_SIZE: int = 100
 
     # LLM Models
-    LLM_MODEL_PRIMARY: str = "gpt-4o-mini"
+    LLM_MODEL_PRIMARY: str = "llama-3.3-70b-versatile"
     LLM_MODEL_FALLBACK: str = "gpt-3.5-turbo"
     LLM_TEMPERATURE: float = 0.1
     LLM_MAX_TOKENS: int = 2000
